@@ -1,0 +1,112 @@
+@extends('auth.layouts.app')
+
+@section('title') Login @endsection
+
+@push('head-styles')
+<link rel="stylesheet" href="{{ asset('auth/style.css') }}">
+@endpush
+
+@push('head-scripts')
+{{-- link script page or cdn --}}
+@endpush
+
+@section('content')
+<div class="admin-auth d-flex justify-content-center align-items-center" >
+    <div class="page py-4">
+        <div class="branding">
+            <div class="d-flex justify-content-center mb-1">
+                <div class="preloader">
+                    <div class="spinner"></div>
+                    <div class="spinner-2"></div>
+                </div>
+            </div>
+            {{-- <h1 class="text-white text-center">LBM</h1> --}}
+            <p class="text-white text-center"> &nbsp; LARAVEL PROJECT STARTUP</p>
+        </div>
+        <div class="px-4">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}" >Sign In</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link active" href="#create-one" data-toggle="tab">Create One</a>
+                </li>
+            </ul>
+
+            <div class="tab-content py-4">
+                
+                {{-- start register form --}}
+                <div id="create-one" class="tab-pane active">
+                    @if($message = Session::has('error'))
+                        <div class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            {{ $message }}
+                            @php Session::forget('error'); @endphp
+                        </div>
+                    @endif
+                    @if($message = Session::has('success'))
+                        <div class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            {{ $message }}
+                            @php Session::forget('success'); @endphp
+                        </div>
+                    @endif
+                    <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                         <div class="form-group">
+                            <label>Full Name</label>
+                            <input  type="text" class="form-control border-0 rounded-0 @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" >
+                            @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label>USER ID</label>
+                            <input type="email" class="form-control border-0 rounded-0 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required >
+                            @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label>PASSWORD</label>
+                            <input type="password" class="form-control border-0 rounded-0 @error('password') is-invalid @enderror" name="password" required >
+                             @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label>RE PASSWORD</label>
+                            <input type="password" class="form-control border-0 rounded-0 @error('password_confirmation') is-invalid @enderror" name="password_confirmation" required >
+                             @error('password_confirmation')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <button type="submit" class="btn btn-danger rounded-0 float-left">
+                                <i class="fa fa-sign-in"></i>
+                               {{ __('Register') }}
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+@section('bottom-scripts')
+    {{-- link script page or code here --}}
+@endsection
