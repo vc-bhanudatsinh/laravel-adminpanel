@@ -1,12 +1,13 @@
 <?php
 return [
 	"backend" => [
-	"daminis" => [
-	"all" => "All Daminis",
-	"create" => "Create Damini",
-	"edit" => "Edit Damini",
-	"management" => "Damini Management",
-	"main" => "Daminis",
+	"users" => [
+	"all" => "All Users",
+	"create" => "Create User",
+	"edit" => "Edit User",
+	"show" => "Show User",
+	"management" => "User Management",
+	"main" => "Users",
 	],
 	],
 ];

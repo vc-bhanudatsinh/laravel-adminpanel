@@ -6,5 +6,5 @@
             </ul>
       </div>
 @else 
-<li aria-expanded="{{ isActiveMenuItem($item) ? 'true' : 'false' }}"><a href="{{ getRouteUrl($item->url, $item->url_type) }}" @if(!empty($item->open_in_new_tab) && ($item->open_in_new_tab == 1)) {{ 'target="_blank"' }} @endif class="list-group-item"  aria-expanded="{{ isActiveMenuItem($item) ? 'true' : 'false' }}"><i class=" fa {{ @$item->icon }}" aria-hidden="true"></i><span class="responsive">&nbsp;&nbsp; {{ $item->name }}</span></a></li>    
+<li aria-expanded="{{ isActiveMenuItem($item) ? 'true' : 'false' }}"><a href="{{ getRouteUrl($item->url, $item->url_type) }}" @if(!empty($item->open_in_new_tab) && ($item->open_in_new_tab == 1)) {{ 'target="_blank"' }} @endif class="list-group-item"  aria-expanded="{{ isActiveMenuItem($item) ? 'true' : 'false' }}"><i class=" fa {{ @$item->icon }}" aria-hidden="true"></i> &nbsp;&nbsp;{{ $item->name }}</a></li>    
 @endif

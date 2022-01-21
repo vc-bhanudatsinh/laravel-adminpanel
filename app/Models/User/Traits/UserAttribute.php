@@ -8,7 +8,7 @@ namespace App\Models\User\Traits;
 trait UserAttribute
 {
     // Make your attributes functions here
-    // Further, see the documentation : https://laravel.com/docs/6.x/eloquent-mutators#defining-an-accessor
+    // Further, see the documentation : https://laravel.com/docs/8.x/eloquent-mutators#defining-an-accessor
 
 
     /**
@@ -19,9 +19,9 @@ trait UserAttribute
     {
         
            return '<div class="btn-group action-btn">
-                ' . $this->getShowButtonAttribute("show-user", "admin.user.show") . '
-                '.$this->getEditButtonAttribute("edit-user", "admin.user.edit").'
-                '.$this->getDeleteButtonAttribute("delete-user", "admin.user.destroy").'
+                ' . $this->getShowButtonAttribute("show-user", "admin.users.show") . '
+                '.$this->getEditButtonAttribute("edit-user", "admin.users.edit").'
+                '.$this->getDeleteButtonAttribute("delete-user", "admin.users.destroy").'
                 </div>';
       
     }

@@ -8,6 +8,7 @@ use App\Exceptions\GeneralException;
 use App\Repositories\BaseRepository;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 /**
  * Class UserRepository.
  */
@@ -94,7 +95,7 @@ class UserRepository extends BaseRepository
         if ($user->update($input))
             return true;
 
-        // throw new GeneralException(trans('exceptions.backend.users.update_error'));
+        throw new GeneralException(trans('exceptions.backend.users.update_error'));
     }
 
     /**
