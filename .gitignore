@@ -14,19 +14,3 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-
-# Applications
-*.app
-*.exe
-*.war
-
-# Large media files
-*.mp4
-*.tiff
-*.avi
-*.flv
-*.mov
-*.wmv
-*.zip
-*.rar
-

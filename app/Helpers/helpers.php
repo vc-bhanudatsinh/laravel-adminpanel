@@ -21,6 +21,15 @@ if (!function_exists('app_name')) {
     }
 }
 
+
+if (!function_exists('access')) {
+  
+    function access()
+    {
+        return auth();
+    }
+}
+
 if (!function_exists('accessAllow')) {
   
     function accessAllow($permission)

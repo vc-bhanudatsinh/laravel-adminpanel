@@ -9,5 +9,12 @@ return [
 	"management" => "User Management",
 	"main" => "Users",
 	],
+	"permissions" => [
+	"all" => "All Permissions",
+	"create" => "Create Permission",
+	"edit" => "Edit Permission",
+	"management" => "Permission Management",
+	"main" => "Permissions",
+	],
 	],
 ];

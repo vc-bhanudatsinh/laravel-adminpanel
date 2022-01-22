@@ -5,8 +5,10 @@ namespace App\Models\Permission;
 use App\Models\Permission\Traits\Attribute\PermissionAttribute;
 use App\Models\Permission\Traits\Relationship\PermissionRelationship;
 use App\Models\ModelTrait;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Role;
+
 /**
  * Class Permission.
  */
@@ -43,6 +45,6 @@ class Permission extends Model
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->table = config('access.permissions_table');
+        $this->table = 'permissions';
     }
 }

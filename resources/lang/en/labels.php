@@ -11,5 +11,15 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"permissions" => [
+	"create" => "Create Permission",
+	"edit" => "Edit Permission",
+	"management" => "Permission Management",
+	"title" => "Permissions",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 ];
