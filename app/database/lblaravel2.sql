@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2022 at 06:25 PM
+-- Generation Time: Jan 22, 2022 at 07:37 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -24,6 +24,42 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `amit`
+--
+
+CREATE TABLE `amit` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ashu`
+--
+
+CREATE TABLE `ashu` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `daminis`
+--
+
+CREATE TABLE `daminis` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `failed_jobs`
 --
 
@@ -35,6 +71,42 @@ CREATE TABLE `failed_jobs` (
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lb`
+--
+
+CREATE TABLE `lb` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lbmodules`
+--
+
+CREATE TABLE `lbmodules` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `manish`
+--
+
+CREATE TABLE `manish` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -60,7 +132,7 @@ CREATE TABLE `menus` (
 --
 
 INSERT INTO `menus` (`id`, `type`, `name`, `items`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'backend', 'Backend Sidebar Menu', '[{\"id\":16,\"name\":\"User Management\",\"url\":\"admin.user.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-user\",\"view_permission_id\":\"view-user-management\",\"content\":\"User Management\"},{\"view_permission_id\":\"edit-setting\",\"icon\":\"fa-gears\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"\",\"name\":\"Setting Management\",\"id\":9,\"content\":\"Setting Management\",\"children\":[{\"view_permission_id\":\"edit-setting\",\"icon\":\"fa-gear\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.setting.edit?setting=1\",\"name\":\"Setting\",\"content\":\"Setting\"},{\"id\":3,\"name\":\"Menu Management\",\"url\":\"admin.menu.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-bars\",\"view_permission_id\":\"view-menu\",\"content\":\"Menu Management\"}]}]', 1, NULL, '2022-01-03 19:59:05', '2022-01-03 19:59:05', NULL);
+(1, 'backend', 'Backend Sidebar Menu', '[{\"id\":16,\"name\":\"User Management\",\"url\":\"admin.users.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-user\",\"view_permission_id\":\"manage-user\",\"content\":\"User Management\"},{\"view_permission_id\":\"manage-module\",\"open_in_new_tab\":0,\"icon\":\"fa-wrench\",\"url_type\":\"route\",\"url\":\"admin.modules.index\",\"name\":\"Module\",\"id\":84,\"content\":\"Module\"},{\"id\":14,\"name\":\"Permission Management\",\"url\":\"admin.permissions.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-linode\",\"view_permission_id\":\"view-permission-management\",\"content\":\"Permission Management\"}]', 1, NULL, '2022-01-09 13:28:53', '2022-01-09 13:28:53', NULL);
 
 -- --------------------------------------------------------
 
@@ -82,13 +154,25 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2014_10_12_200000_add_two_factor_columns_to_users_table', 1),
-(4, '2019_08_19_000000_create_failed_jobs_table', 1),
-(5, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(6, '2021_12_04_165910_create_menus_table', 1),
-(7, '2021_12_04_165950_create_modules_table', 1),
-(8, '2021_12_04_170022_create_pages_table', 1),
-(9, '2021_12_25_095757_laratrust_setup_tables', 1),
-(10, '2022_01_01_064810_create_sessions_table', 1);
+(4, '2017_11_02_060149_create_modules_table', 1),
+(5, '2017_11_02_060149_create_settings_table', 1),
+(6, '2019_08_19_000000_create_failed_jobs_table', 1),
+(7, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(8, '2021_12_04_165910_create_menus_table', 1),
+(9, '2021_12_04_170022_create_pages_table', 1),
+(10, '2021_12_25_095757_laratrust_setup_tables', 1),
+(11, '2022_01_01_064810_create_sessions_table', 1),
+(12, '2022_01_09_193559_create_vivek_table', 2),
+(13, '2022_01_09_194525_create_manish_table', 2),
+(14, '2022_01_09_194717_create_lb_table', 2),
+(15, '2022_01_09_195846_create_ashu_table', 2),
+(16, '2022_01_09_200254_create_amit_table', 2),
+(17, '2022_01_10_182615_create_nipun_table', 2),
+(18, '2022_01_10_200822_create_nisant_table', 2),
+(19, '2022_01_10_205037_create_mohan_table', 2),
+(20, '2022_01_15_092417_create_ravi_table', 2),
+(21, '2022_01_15_095108_create_daminis_table', 2),
+(22, '2022_01_15_162908_create_lbmodules_table', 3);
 
 -- --------------------------------------------------------
 
@@ -97,11 +181,62 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `modules` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `view_permission_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'view_route',
+  `created_by` int(10) UNSIGNED NOT NULL,
+  `updated_by` int(10) UNSIGNED DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `modules`
+--
+
+INSERT INTO `modules` (`id`, `view_permission_id`, `name`, `url`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
+(1, 'view-amit-permission', 'Amit', 'admin.amits.index', 1, NULL, '2022-01-09 14:32:54', '2022-01-09 14:32:54'),
+(2, 'view-nipun-permission', 'Nipun', 'admin.nipuns.index', 1, NULL, '2022-01-10 12:56:16', '2022-01-10 12:56:16'),
+(3, 'view-nisant-permission', 'Nisant', 'admin.nisants.index', 1, NULL, '2022-01-10 14:38:23', '2022-01-10 14:38:23'),
+(4, 'view-mohan-permission', 'Mohan', 'admin.mohans.index', 1, NULL, '2022-01-10 15:20:38', '2022-01-10 15:20:38'),
+(5, 'view-ravi-permission', 'Ravi', 'admin.ravis.index', 1, NULL, '2022-01-15 03:54:18', '2022-01-15 03:54:18'),
+(6, 'view-damini-permission', 'Damini', 'admin.daminis.index', 1, NULL, '2022-01-15 04:21:09', '2022-01-15 04:21:09'),
+(7, 'view-lbmodule-permission', 'Lbmodule', 'admin.lbmodules.index', 1, NULL, '2022-01-15 10:59:09', '2022-01-15 10:59:09'),
+(8, 'view-permission-permission', 'Permission Management', 'admin.permissions.index', 1, NULL, '2022-01-22 10:10:54', '2022-01-22 10:10:54');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mohan`
+--
+
+CREATE TABLE `mohan` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `view_permission_id` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `url` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_by` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nipun`
+--
+
+CREATE TABLE `nipun` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nisant`
+--
+
+CREATE TABLE `nisant` (
+  `id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -154,20 +289,66 @@ CREATE TABLE `permissions` (
   `sort` int(10) UNSIGNED DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 1,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by` bigint(20) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `permissions`
 --
 
-INSERT INTO `permissions` (`id`, `name`, `display_name`, `sort`, `status`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'view-user-management', 'View User Management', NULL, 1, NULL, '2022-01-03 19:59:04', '2022-01-03 19:59:04'),
-(2, 'edit-user', 'Edit User', NULL, 1, NULL, '2022-01-03 19:59:04', '2022-01-03 19:59:04'),
-(3, 'create-user', 'Create User', NULL, 1, NULL, '2022-01-03 19:59:04', '2022-01-03 19:59:04'),
-(4, 'delete-user', 'Delete User', NULL, 1, NULL, '2022-01-03 19:59:04', '2022-01-03 19:59:04'),
-(5, 'show-user', 'Show User', NULL, 1, NULL, '2022-01-03 19:59:04', '2022-01-03 19:59:04');
+INSERT INTO `permissions` (`id`, `name`, `display_name`, `sort`, `status`, `description`, `created_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'view-user-management', 'View User Management', NULL, 1, NULL, NULL, '2022-01-09 13:28:51', '2022-01-09 13:28:51', NULL),
+(2, 'edit-user', 'Edit User', NULL, 1, NULL, NULL, '2022-01-09 13:28:52', '2022-01-09 13:28:52', NULL),
+(3, 'create-user', 'Create User', NULL, 1, NULL, NULL, '2022-01-09 13:28:52', '2022-01-09 13:28:52', NULL),
+(4, 'delete-user', 'Delete User', NULL, 1, NULL, NULL, '2022-01-09 13:28:52', '2022-01-09 13:28:52', NULL),
+(5, 'show-user', 'Show User', NULL, 1, NULL, NULL, '2022-01-09 13:28:52', '2022-01-09 13:28:52', NULL),
+(6, 'manage-amit', 'Manage amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
+(7, 'create-amit', 'Create amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
+(8, 'store-amit', 'Store amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
+(9, 'edit-amit', 'Edit amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
+(10, 'update-amit', 'Update amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
+(11, 'delete-amit', 'Delete amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
+(12, 'manage-nipun', 'Manage nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
+(13, 'create-nipun', 'Create nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
+(14, 'store-nipun', 'Store nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
+(15, 'edit-nipun', 'Edit nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
+(16, 'update-nipun', 'Update nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
+(17, 'delete-nipun', 'Delete nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
+(18, 'manage-nisant', 'Manage nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
+(19, 'create-nisant', 'Create nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
+(20, 'store-nisant', 'Store nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
+(21, 'edit-nisant', 'Edit nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
+(22, 'update-nisant', 'Update nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
+(23, 'delete-nisant', 'Delete nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
+(24, 'manage-mohan', 'Manage mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:37', '2022-01-10 15:20:37', NULL),
+(25, 'create-mohan', 'Create mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:37', '2022-01-10 15:20:37', NULL),
+(26, 'store-mohan', 'Store mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:38', '2022-01-10 15:20:38', NULL),
+(27, 'edit-mohan', 'Edit mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:38', '2022-01-10 15:20:38', NULL),
+(28, 'update-mohan', 'Update mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:38', '2022-01-10 15:20:38', NULL),
+(29, 'delete-mohan', 'Delete mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:38', '2022-01-10 15:20:38', NULL),
+(30, 'manage-ravi', 'Manage ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
+(31, 'create-ravi', 'Create ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
+(32, 'store-ravi', 'Store ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
+(33, 'edit-ravi', 'Edit ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
+(34, 'update-ravi', 'Update ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
+(35, 'delete-ravi', 'Delete ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
+(36, 'manage-damini', 'Manage damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
+(37, 'create-damini', 'Create damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
+(38, 'store-damini', 'Store damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
+(39, 'edit-damini', 'Edit damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
+(40, 'update-damini', 'Update damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
+(41, 'delete-damini', 'Delete damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
+(42, 'manage-lbmodule', 'Manage lbmodule Permission', NULL, 1, NULL, 1, '2022-01-15 10:59:09', '2022-01-15 10:59:09', NULL),
+(43, 'manage-user', 'Manage user Permission', NULL, 1, NULL, 1, '2022-01-19 13:28:56', '2022-01-19 13:28:56', NULL),
+(45, 'manage-permission', 'Manage permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
+(46, 'create-permission', 'Create permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
+(47, 'store-permission', 'Store permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
+(48, 'edit-permission', 'Edit permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
+(49, 'update-permission', 'Update permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
+(50, 'delete-permission', 'Delete permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL);
 
 -- --------------------------------------------------------
 
@@ -189,7 +370,8 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (2, 2),
 (3, 2),
 (4, 2),
-(5, 2);
+(5, 2),
+(37, 1);
 
 -- --------------------------------------------------------
 
@@ -224,6 +406,18 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ravi`
+--
+
+CREATE TABLE `ravi` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `roles`
 --
 
@@ -243,9 +437,9 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `all`, `status`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator', 'Administrator', 1, 1, 'Admin default created by Lblara', '2022-01-03 19:59:03', '2022-01-03 19:59:03'),
-(2, 'Executive', 'Executive', 0, 1, 'Executive default created by Lblara', '2022-01-03 19:59:03', '2022-01-03 19:59:03'),
-(3, 'User', 'User', 0, 1, 'User default created  by Lblara', '2022-01-03 19:59:03', '2022-01-03 19:59:03');
+(1, 'Administrator', 'Administrator', 1, 1, 'Admin default created by Lblara', '2022-01-09 13:28:51', '2022-01-09 13:28:51'),
+(2, 'Executive', 'Executive', 0, 1, 'Executive default created by Lblara', '2022-01-09 13:28:51', '2022-01-09 13:28:51'),
+(3, 'User', 'User', 0, 1, 'User default created  by Lblara', '2022-01-09 13:28:51', '2022-01-09 13:28:51');
 
 -- --------------------------------------------------------
 
@@ -266,8 +460,7 @@ CREATE TABLE `role_user` (
 INSERT INTO `role_user` (`role_id`, `user_id`, `user_type`) VALUES
 (1, 1, 'App\\Models\\User'),
 (2, 2, 'App\\Models\\User'),
-(3, 3, 'App\\Models\\User'),
-(3, 6, 'App\\Models\\User\\User');
+(3, 3, 'App\\Models\\User');
 
 -- --------------------------------------------------------
 
@@ -289,7 +482,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('9hqXl22eVJlAoVDyXUFP004xXppItYtf9xjQoXju', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoicHNpYjB0NUpzbmJTRmZWR2xadVpBRHY2SGhFZUZaM2liOHpYM2Z3WSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi91c2VyIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJC9aenhWemY5N0N6d3guTVJIRTNBUy5YeVpPT1Z6c3ZIZi8yc01haXRQdWFidFFYbDExMlZhIjtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCQvWnp4VnpmOTdDend4Lk1SSEUzQVMuWHlaT09WenN2SGYvMnNNYWl0UHVhYnRRWGwxMTJWYSI7fQ==', 1641489140);
+('HGfbovqLkxiwypvUBq9OQFnF1GvzxMYIDIZjGG7m', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoicmhCNFNUYktSOGpJUkM4UlEzcTB4Zm4yVWhwcm5vUk5uMUN0cW82cyI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjQwOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vdXNlcnMvY3JlYXRlIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHZCd0xIc0FpVmt0TlpEVjJSSXhQVHVONXRKMndWN3hFRVFIUzJ1U0dnTkFNelYzS293Q0lXIjtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCR2QndMSHNBaVZrdE5aRFYyUkl4UFR1TjV0SjJ3Vjd4RUVRSFMydVNHZ05BTXpWM0tvd0NJVyI7fQ==', 1642876520);
 
 -- --------------------------------------------------------
 
@@ -326,23 +519,8 @@ CREATE TABLE `settings` (
   `explanation3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `explanation4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `name` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `version` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mobile` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `timing` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_description` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `location` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `settings`
---
-
-INSERT INTO `settings` (`id`, `logo`, `favicon`, `seo_title`, `seo_keyword`, `seo_description`, `company_contact`, `company_address`, `from_name`, `from_email`, `facebook`, `linkedin`, `twitter`, `google`, `copyright_text`, `footer_text`, `terms`, `disclaimer`, `google_analytics`, `home_video1`, `home_video2`, `home_video3`, `home_video4`, `explanation1`, `explanation2`, `explanation3`, `explanation4`, `created_at`, `updated_at`, `name`, `version`, `description`, `mobile`, `email`, `timing`, `contact_description`, `location`) VALUES
-(1, 'images/setting/Artboard-1443.png', NULL, 'LB admin panel boilerplate', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'LB admin panel', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-06 09:47:02', 'LB admin panel', '1.001', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', '+45 31 32 10 29', 'lbmadesia@gmail.com', '07:00 AM TO 7:00 PM CT', 'LB admin panel', 'LB admin panel');
 
 -- --------------------------------------------------------
 
@@ -373,14 +551,43 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `passwordtext`, `remember_token`, `current_team_id`, `profile_photo_path`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Admin', 'admin@admin.com', NULL, '$2y$10$/ZzxVzf97Czwx.MRHE3AS.XyZOOVzsvHf/2sMaitPuabtQXl112Va', NULL, NULL, NULL, NULL, NULL, 'backend/image/profile.jpeg', 'Enable', '2022-01-03 19:59:04', '2022-01-03 19:59:04', NULL),
-(2, 'Executive', 'executive@executive.com', NULL, '$2y$10$SynZwEzJn0kIQQ3f13sgeOarWoHKXXqZZ59qBlrC3nVD0OcvlUVjS', NULL, NULL, NULL, NULL, NULL, 'backend/image/profile.jpeg', 'Enable', '2022-01-03 19:59:05', '2022-01-03 19:59:05', NULL),
-(3, 'Lb madesia', 'user@user.com', NULL, '$2y$10$e2jT5RB5c9ENVq2TyzBMoOmn8RWkhZCNurquA1QaYrWRjt5zvQRaq', NULL, NULL, NULL, NULL, NULL, 'frontend/image/profile.jpeg', 'Enable', '2022-01-03 19:59:05', '2022-01-03 19:59:05', NULL),
-(6, 'ajay', 'ajay@ajay.com', NULL, '$2y$10$cHT4NrVySA1Hb5s4cftEMOZlvHw1MF3hXoBQpQDxLmXRDp2yXf6iW', NULL, NULL, 'JDJ5JDEwJGNIVDROclZ5U0ExSGI1czRjZnRFTU9abHZIdzFNRjNoWG9CUXBRRHhMbVhSRHAyeVhmNmlX', NULL, NULL, 'images\\users\\aj_lb299.jpg', 'Enable', '2022-01-04 11:09:26', '2022-01-04 11:09:26', NULL);
+(1, 'Admin', 'admin@admin.com', NULL, '$2y$10$vBwLHsAiVktNZDV2RIxPTuN5tJ2wV7xEEQHS2uSGgNAMzV3KowCIW', NULL, NULL, NULL, NULL, NULL, 'backend/image/profile.jpeg', 'Enable', '2022-01-09 13:28:52', '2022-01-09 13:28:52', NULL),
+(2, 'Executive', 'executive@executive.com', NULL, '$2y$10$OQ/DFu/rH8PGDcoMkbQWH.QnHrVbY7n4PD60SJJ6iyGeYSuG1mpsC', NULL, NULL, NULL, NULL, NULL, 'backend/image/profile.jpeg', 'Enable', '2022-01-09 13:28:53', '2022-01-09 13:28:53', NULL),
+(3, 'Lb madesia', 'user@user.com', NULL, '$2y$10$I6xpEPLhUDOTf8yq10mpk.VYTWf/tl1.xyKC0Xg1OgArXqkDMhASi', NULL, NULL, NULL, NULL, NULL, 'frontend/image/profile.jpeg', 'Enable', '2022-01-09 13:28:53', '2022-01-09 13:28:53', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vivek`
+--
+
+CREATE TABLE `vivek` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `amit`
+--
+ALTER TABLE `amit`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ashu`
+--
+ALTER TABLE `ashu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `daminis`
+--
+ALTER TABLE `daminis`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -388,6 +595,24 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `tw
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `lb`
+--
+ALTER TABLE `lb`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `lbmodules`
+--
+ALTER TABLE `lbmodules`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `manish`
+--
+ALTER TABLE `manish`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `menus`
@@ -405,8 +630,25 @@ ALTER TABLE `migrations`
 -- Indexes for table `modules`
 --
 ALTER TABLE `modules`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `modules_view_permission_id_unique` (`view_permission_id`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mohan`
+--
+ALTER TABLE `mohan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `nipun`
+--
+ALTER TABLE `nipun`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `nisant`
+--
+ALTER TABLE `nisant`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `pages`
@@ -451,6 +693,12 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Indexes for table `ravi`
+--
+ALTER TABLE `ravi`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `roles`
 --
 ALTER TABLE `roles`
@@ -486,13 +734,55 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
+-- Indexes for table `vivek`
+--
+ALTER TABLE `vivek`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `amit`
+--
+ALTER TABLE `amit`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `ashu`
+--
+ALTER TABLE `ashu`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `daminis`
+--
+ALTER TABLE `daminis`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `lb`
+--
+ALTER TABLE `lb`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `lbmodules`
+--
+ALTER TABLE `lbmodules`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `manish`
+--
+ALTER TABLE `manish`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -505,12 +795,30 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `modules`
 --
 ALTER TABLE `modules`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `mohan`
+--
+ALTER TABLE `mohan`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `nipun`
+--
+ALTER TABLE `nipun`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `nisant`
+--
+ALTER TABLE `nisant`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -523,12 +831,18 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `ravi`
+--
+ALTER TABLE `ravi`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -541,13 +855,19 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `vivek`
+--
+ALTER TABLE `vivek`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

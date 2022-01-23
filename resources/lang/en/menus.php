@@ -16,5 +16,12 @@ return [
 	"management" => "Permission Management",
 	"main" => "Permissions",
 	],
+	"roles" => [
+	"all" => "All Roles",
+	"create" => "Create Role",
+	"edit" => "Edit Role",
+	"management" => "Role Management",
+	"main" => "Roles",
+	],
 	],
 ];

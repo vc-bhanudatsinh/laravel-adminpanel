@@ -19,9 +19,13 @@ class LaratrustSetupTables extends Migration
             $table->string('name')->unique();
             $table->string('display_name')->nullable();
             $table->integer('all')->default(0);
+            $table->bigInteger('sort')->default(0);
             $table->integer('status')->default(1);
             $table->string('description')->nullable();
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
 
         // Create table for storing permissions
@@ -39,6 +43,7 @@ class LaratrustSetupTables extends Migration
 
         // Create table for associating roles to users and teams (Many To Many Polymorphic)
         Schema::create('role_user', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('role_id');
             $table->unsignedBigInteger('user_id');
             $table->string('user_type');

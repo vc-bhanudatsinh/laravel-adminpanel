@@ -20,6 +20,8 @@ class PermissionRepository extends BaseRepository
     /**
      * @return mixed
      */
+    
+
     public function getForDataTable()
     {
         return $this->query()

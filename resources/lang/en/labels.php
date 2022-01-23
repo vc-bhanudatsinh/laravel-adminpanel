@@ -21,5 +21,15 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"roles" => [
+	"create" => "Create Role",
+	"edit" => "Edit Role",
+	"management" => "Role Management",
+	"title" => "Roles",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 ];

@@ -1,4 +1,4 @@
- @if(request()->is('admin/permissions*'))
+ @if(request()->is('admin/roles*'))
 
 {{--  header action buttons --}}
 <div class="btn-group float-right">
@@ -7,8 +7,8 @@
     Action
     </button>
     <div class="dropdown-menu">
-        <a class="dropdown-item" href="{{ route( 'admin.permissions.index' ) }}"><i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.permissions.all' ) }}</a>
-        <a class="dropdown-item" href="{{ route( 'admin.permissions.create' ) }}"><i class="fa fa-plus"></i> {{ trans( 'menus.backend.permissions.create' ) }}</a>
+        <a class="dropdown-item" href="{{ route( 'admin.roles.index' ) }}"><i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.roles.all' ) }}</a>
+        <a class="dropdown-item" href="{{ route( 'admin.roles.create' ) }}"><i class="fa fa-plus"></i> {{ trans( 'menus.backend.roles.create' ) }}</a>
       </div>
     </div>
 </div>

@@ -11,5 +11,10 @@ return [
 	"deleted" => "The Permission was successfully deleted.",
 	"updated" => "The Permission was successfully updated.",
 	],
+	"roles" => [
+	"created" => "The Role was successfully created.",
+	"deleted" => "The Role was successfully deleted.",
+	"updated" => "The Role was successfully updated.",
+	],
 	],
 ];

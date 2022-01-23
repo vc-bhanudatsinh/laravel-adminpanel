@@ -50,7 +50,7 @@ class PermissionsController extends Controller
      */
     public function create(CreatePermissionRequest $request)
     {
-        return view('backend.permissions.create');
+        return view('backend.permissions.create')->withPermissionCount($this->permissions->getCount());
     }
 
     /**
