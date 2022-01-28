@@ -1,7 +1,8 @@
 @extends ('backend.layouts.app')
 
-@section ('title', trans('labels.backend.menus.management') . ' | ' . trans('labels.backend.menus.edit'))
-
+@section ('title')
+ menus Management
+@endsection
 
 @section('content')
     {{ Form::model($menu, ['route' => ['admin.menus.update', $menu], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-role', 'files' => true]) }}
@@ -30,4 +31,3 @@
     {{ Form::close() }}
     @include("backend.menus.partials.modal")
 @endsection
-

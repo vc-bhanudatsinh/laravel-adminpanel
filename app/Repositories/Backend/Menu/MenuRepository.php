@@ -2,10 +2,8 @@
 
 namespace App\Repositories\Backend\Menu;
 
-use DB;
-use Carbon\Carbon;
-use App\Models\Menu\Menu;
 use App\Exceptions\GeneralException;
+use App\Models\Menu\Menu;
 use App\Repositories\BaseRepository;
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,57 +18,70 @@ class MenuRepository extends BaseRepository
     const MODEL = Menu::class;
 
     /**
-     * This method is used by Table Controller
-     * For getting the table data to show in
-     * the grid
      * @return mixed
      */
     public function getForDataTable()
     {
         return $this->query()
             ->select([
-                config('module.menus.table').'.id',
-                config('module.menus.table').'.created_at',
-                config('module.menus.table').'.updated_at',
+                config('access.menus_table').'.id',
+                config('access.menus_table').'.name',
+                config('access.menus_table').'.type',
+                config('access.menus_table').'.created_at',
+                config('access.menus_table').'.updated_at',
             ]);
     }
 
     /**
-     * For Creating the respective model in storage
-     *
      * @param array $input
-     * @throws GeneralException
+     *
+     * @throws \App\Exceptions\GeneralException
+     *
      * @return bool
      */
     public function create(array $input)
     {
-        if ($Menu::create($input)) {
+        if ($this->query()->where('name', $input['name'])->first()) {
+            throw new GeneralException(trans('exceptions.backend.menus.already_exists'));
+        }
+
+        $input['created_by'] = access()->user()->id;
+
+        if (Menu::create($input)) {
             return true;
         }
+
         throw new GeneralException(trans('exceptions.backend.menus.create_error'));
     }
 
     /**
-     * For updating the respective Model in storage
-     *
-     * @param Menu $menu
+     * @param \App\Models\Menu\Menu $menu
      * @param  $input
-     * @throws GeneralException
+     *
+     * @throws \App\Exceptions\GeneralException
+     *
      * return bool
      */
     public function update(Menu $menu, array $input)
     {
-    	if ($menu->update($input))
+        if ($this->query()->where('name', $input['name'])->where('id', '!=', $menu->id)->first()) {
+            throw new GeneralException(trans('exceptions.backend.menus.already_exists'));
+        }
+
+        $input['updated_by'] = access()->user()->id;
+
+        if ($menu->update($input)) {
             return true;
+        }
 
         throw new GeneralException(trans('exceptions.backend.menus.update_error'));
     }
 
     /**
-     * For deleting the respective model from storage
+     * @param \App\Models\Menu\Menu $menu
      *
-     * @param Menu $menu
-     * @throws GeneralException
+     * @throws \App\Exceptions\GeneralException
+     *
      * @return bool
      */
     public function delete(Menu $menu)

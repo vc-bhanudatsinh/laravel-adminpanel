@@ -2,15 +2,15 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
      {{-- <link rel="icon" sizes="16x16" type="image/png" href="{{route('frontend.index')}}/img/favicon_icon/{{settings()->favicon}}"> --}}
-       
+
      <title>@yield('title', app_name())</title>
      <script src="{{ asset('js/app.js') }}" defer></script>
-    
+
         <!-- Meta -->
         <meta name="description" content="@yield('meta_description', 'Default Description')">
         <meta name="author" content="@yield('meta_author', 'Lb Madesia')">
@@ -21,17 +21,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/panel.css') }}" rel="stylesheet">
     <script src="{{ asset('backend/js/panel.js') }}" defer></script>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
  <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
-    
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>   
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     @stack('head-styles')
     @stack('head-scripts')
@@ -56,7 +56,7 @@
                     @endphp
                     @if($roles == "3")
                        @include('backend.includes.sidebar')
-                    @else 
+                    @else
                     @include('backend.includes.sidebar-dynamic')
                     @endif
                 </div>
@@ -75,12 +75,12 @@
                 @include('backend.includes.footer')
                 @include('sweetalert::alert')
             </div>
-        </main> 
+        </main>
     </div>
 
 </body>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{ asset('backend/js/lb.js') }}" defer></script>
- 
+   {{ Html::script('backend/js/backend-custom.js') }}
 @yield('bottom-scripts')
 </html>

@@ -24,9 +24,8 @@ class StoreMenuRequest extends FormRequest
     public function rules()
     {
         return [
-            //Put your rules for the request in here
-            //For Example : 'title' => 'required'
-            //Further, see the documentation : https://laravel.com/docs/8.x/validation#creating-form-requests
+            'name' => 'required',
+            'type' => 'required',
         ];
     }
 

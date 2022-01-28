@@ -2,47 +2,47 @@
 
 namespace App\Http\Controllers\Backend\Menu;
 
-use Carbon\Carbon;
 use App\Http\Controllers\Controller;
-use Yajra\DataTables\Facades\DataTables;
-use App\Repositories\Backend\Menu\MenuRepository;
 use App\Http\Requests\Backend\Menu\ManageMenuRequest;
+use App\Repositories\Backend\Menu\MenuRepository;
+use Carbon\Carbon;
+use Yajra\DataTables\Facades\DataTables;
 
 /**
- * Class MenusTableController.
+ * Class MenuTableController.
  */
 class MenusTableController extends Controller
 {
-    /**
-     * variable to store the repository object
-     * @var MenuRepository
-     */
-    protected $menu;
+    protected $menus;
 
     /**
-     * contructor to initialize repository object
-     * @param MenuRepository $menu;
+     * @param \App\Repositories\Backend\Menu\MenuRepository $menus
      */
-    public function __construct(MenuRepository $menu)
+    public function __construct(MenuRepository $menus)
     {
-        $this->menu = $menu;
+        $this->menus = $menus;
     }
 
     /**
-     * This method return the data of the model
-     * @param ManageMenuRequest $request
+     * @param \App\Http\Requests\Backend\Menu\ManageMenuRequest $request
      *
      * @return mixed
      */
     public function __invoke(ManageMenuRequest $request)
     {
-        return Datatables::of($this->menu->getForDataTable())
-            ->escapeColumns(['id'])
-            ->addColumn('created_at', function ($menu) {
-                return Carbon::parse($menu->created_at)->toDateString();
+        return Datatables::of($this->menus->getForDataTable())
+            ->escapeColumns(['name'])
+            ->addColumn('type', function ($menus) {
+                return ucwords($menus->type);
             })
-            ->addColumn('actions', function ($menu) {
-                return $menu->action_buttons;
+            ->addColumn('created_at', function ($menus) {
+                return Carbon::parse($menus->created_at)->toDateTimeString();
+            })
+            ->addColumn('updated_at', function ($menus) {
+                return Carbon::parse($menus->updated_at)->toDateTimeString();
+            })
+            ->addColumn('actions', function ($menus) {
+                return $menus->action_buttons;
             })
             ->make(true);
     }
