@@ -23,5 +23,22 @@ return [
 	"management" => "Role Management",
 	"main" => "Roles",
 	],
+	"sidebar" => [
+	"dashboard" => "Dashboard",
+	],
+	"menus" => [
+	"all" => "All Menus",
+	"create" => "Create Menu",
+	"edit" => "Edit Menu",
+	"management" => "Menu Management",
+	"main" => "Menus",
+	],
+	"settings" => [
+	"all" => "All Settings",
+	"create" => "Create Setting",
+	"edit" => "Edit Setting",
+	"management" => "Setting Management",
+	"main" => "Settings",
+	],
 	],
 ];

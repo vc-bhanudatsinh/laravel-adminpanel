@@ -23,7 +23,7 @@ if (!function_exists('app_name')) {
 
 
 if (!function_exists('access')) {
-  
+
     function access()
     {
         return auth();
@@ -31,7 +31,7 @@ if (!function_exists('access')) {
 }
 
 if (!function_exists('accessAllow')) {
-  
+
     function accessAllow($permission)
     {
         $user = auth()->user();
@@ -43,7 +43,7 @@ if (!function_exists('accessAllow')) {
             }
             $allow = $role->permissions->where('name', $permission);
             if(count($allow)){
-              return true;  
+              return true;
               break;
             }
         }
@@ -114,7 +114,7 @@ if (!function_exists('getRouteUrl')) {
      * Converts querystring params to array and use it as route params and returns URL.
      */
     function getRouteUrl($url, $url_type = 'route', $separator = '?')
-    {  
+    {
         $routeUrl = '';
         if (!empty($url)) {
             if ($url_type == 'route') {
@@ -180,7 +180,7 @@ if (!function_exists('checkDatabaseConnection')) {
 if (!function_exists('isActiveMenuItem')) {
     function isActiveMenuItem($item, $separator = '?')
     {
-    
+
         $item->clean_url = $item->url;
        if(!empty($item->clean_url)){
             if (strpos($item->url, $separator)) {
@@ -188,7 +188,7 @@ if (!function_exists('isActiveMenuItem')) {
                 $item->clean_url2 = explode($separator, $item->url);
                 $item->clean_url = $item->clean_url2[0];
             }
-        
+
             if(strpos(Route::currentRouteName(), $item->clean_url) === 0){
                 return true;
             }

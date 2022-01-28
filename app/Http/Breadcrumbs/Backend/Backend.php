@@ -8,3 +8,5 @@ Breadcrumbs::register('admin.dashboard', function ($breadcrumbs) {
 require __DIR__.'/User.php';
 require __DIR__.'/Permission.php';
 require __DIR__.'/Role.php';
+require __DIR__.'/Menu.php';
+require __DIR__.'/Setting.php';

@@ -31,5 +31,25 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"menus" => [
+	"create" => "Create Menu",
+	"edit" => "Edit Menu",
+	"management" => "Menu Management",
+	"title" => "Menus",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
+	"settings" => [
+	"create" => "Create Setting",
+	"edit" => "Edit Setting",
+	"management" => "Setting Management",
+	"title" => "Settings",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 ];

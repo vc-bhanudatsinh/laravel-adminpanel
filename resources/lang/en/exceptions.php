@@ -22,5 +22,19 @@ return [
 	"not_found" => "That Role does not exist.",
 	"update_error" => "There was a problem updating this Role. Please try again.",
 	],
+	"menus" => [
+	"already_exists" => "That Menu already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Menu. Please try again.",
+	"delete_error" => "There was a problem deleting this Menu. Please try again.",
+	"not_found" => "That Menu does not exist.",
+	"update_error" => "There was a problem updating this Menu. Please try again.",
+	],
+	"settings" => [
+	"already_exists" => "That Setting already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Setting. Please try again.",
+	"delete_error" => "There was a problem deleting this Setting. Please try again.",
+	"not_found" => "That Setting does not exist.",
+	"update_error" => "There was a problem updating this Setting. Please try again.",
+	],
 	],
 ];

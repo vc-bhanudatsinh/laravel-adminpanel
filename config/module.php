@@ -15,4 +15,10 @@ return [
 	"users" => [
 	"table" => "users",
 	],
+	"menus" => [
+	"table" => "menus",
+	],
+	"settings" => [
+	"table" => "settings",
+	],
 ];

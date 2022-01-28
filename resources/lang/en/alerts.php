@@ -16,5 +16,15 @@ return [
 	"deleted" => "The Role was successfully deleted.",
 	"updated" => "The Role was successfully updated.",
 	],
+	"menus" => [
+	"created" => "The Menu was successfully created.",
+	"deleted" => "The Menu was successfully deleted.",
+	"updated" => "The Menu was successfully updated.",
+	],
+	"settings" => [
+	"created" => "The Setting was successfully created.",
+	"deleted" => "The Setting was successfully deleted.",
+	"updated" => "The Setting was successfully updated.",
+	],
 	],
 ];
