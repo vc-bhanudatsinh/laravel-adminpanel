@@ -13,7 +13,7 @@ class ManageSettingRequest extends FormRequest
      */
     public function authorize()
     {
-        return accessAllow('manage-setting');
+        return accessAllow('edit-setting');
     }
 
     /**

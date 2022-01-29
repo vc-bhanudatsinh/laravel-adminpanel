@@ -24,9 +24,8 @@ class UpdateSettingRequest extends FormRequest
     public function rules()
     {
         return [
-            //Put your rules for the request in here
-            //For Example : 'title' => 'required'
-            //Further, see the documentation : https://laravel.com/docs/8.x/validation#creating-form-requests
+            'logo.dimensions'     => 'Invalid logo - should be minimum 226*48',
+            'favicon.dimensions'  => 'Invalid favicon - should be 16*16',
         ];
     }
 

@@ -9,6 +9,7 @@ use App\Repositories\BaseRepository;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 /**
  * Class UserRepository.
  */
@@ -32,6 +33,7 @@ class UserRepository extends BaseRepository
     public function __construct()
     {
         $this->upload_path = 'images' . DIRECTORY_SEPARATOR . 'users' . DIRECTORY_SEPARATOR;
+        $this->storage = Storage::disk('public');
     }
 
     public function getForDataTable()
@@ -78,14 +80,14 @@ class UserRepository extends BaseRepository
      */
     public function update(User $user, array $input)
     {
-        
+
         if (empty($input['profile_photo_path']))
            unset($input['profile_photo_path']);
         else {
             $this->deleteOldFile($user->profile_photo_path);
            $input = $this->uploadImage($input);
         }
-        if(empty($input['password'])) 
+        if(empty($input['password']))
            unset($input['password']);
         else{
              $input['password'] = Hash::make($input['password']);
@@ -107,7 +109,9 @@ class UserRepository extends BaseRepository
      */
     public function delete(User $user)
     {
-        if ($user->delete()) {
+        $profile_photo_path = $user->profile_photo_path;
+        if($user->delete()) {
+            $this->deleteOldFile($profile_photo_path);
             return true;
         }
 

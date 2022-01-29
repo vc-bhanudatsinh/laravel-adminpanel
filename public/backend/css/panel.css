@@ -26,7 +26,15 @@
  }
  .scrollbar-lb {
      overflow-y: scroll;
-   
+
+ }
+ .over-danger{
+    background-color: darkred !important;
+    color:#fff !important;
+ }
+ .over-success{
+    background-color: blue !important;
+    color:#fff !important;
  }
 
  .scrollbar-lb::-webkit-scrollbar {

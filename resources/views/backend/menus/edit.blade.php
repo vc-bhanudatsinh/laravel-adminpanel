@@ -4,16 +4,17 @@
 
 
 @section('content')
+<div class=" p-3">
+    <div class="col-md-12 bg-white py-3 px-2 shadow-lg bordertop-5 ">
     {{ Form::model($menu, ['route' => ['admin.menus.update', $menu], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-role', 'files' => true]) }}
 
         <div class="box box-info">
-            <div class="box-header with-border">
-                <h3 class="box-title">{{ trans('labels.backend.menus.edit') }}</h3>
 
-                <div class="box-tools pull-right">
-                    @include('backend.menus.partials.header-buttons')
-                </div><!--box-tools pull-right-->
-            </div><!-- /.box-header -->
+            <div class="row text-dark">
+                <div class="col-md-6"><b>{{ trans('labels.backend.menus.edit') }}</b></div>
+                <div class="col-md-6"> @include('backend.menus.partials.header-buttons')</div>
+            </div>
+
 
             {{-- Including Form blade file --}}
             <div class="box-body">
@@ -29,5 +30,7 @@
     </div>
     {{ Form::close() }}
     @include("backend.menus.partials.modal")
+    </div>
+</div>
 @endsection
 
