@@ -12,16 +12,16 @@
                 @include('backend.roles.partials.roles-header-buttons')
             </div>
         </div>
-         
+
         <div class="table-parent py-4">
             <div class="table-responsive data-table-wrapper">
                 <table id="roles-table" class="table table-striped table-bordered nowrap text-center">
                     <thead>
                         <tr>
-                            <th>{{ trans('labels.backend.access.roles.table.role') }}</th>
-                            <th>{{ trans('labels.backend.access.roles.table.permissions') }}</th>
-                            <th>{{ trans('labels.backend.access.roles.table.number_of_users') }}</th>
-                            <th>{{ trans('labels.backend.access.roles.table.sort') }}</th>
+                            <th>{{ trans('labels.backend.roles.table.role') }}</th>
+                            <th>{{ trans('labels.backend.roles.table.permissions') }}</th>
+                            <th>{{ trans('labels.backend.roles.table.number_of_users') }}</th>
+                            <th>{{ trans('labels.backend.roles.table.sort') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>

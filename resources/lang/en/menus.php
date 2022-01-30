@@ -40,5 +40,9 @@ return [
 	"management" => "Setting Management",
 	"main" => "Settings",
 	],
+    'modules'=>[
+       'all'=>'All Modules',
+       'create'=>'Create Module',
+    ]
 	],
 ];

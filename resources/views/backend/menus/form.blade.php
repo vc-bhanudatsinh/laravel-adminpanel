@@ -2,19 +2,21 @@
     <hr/>
     <div class="row">
             <div class="col-4">
-                <div class="form-group">
-                    {{ Form::label('categories', trans('labels.backend.menus.field.type'), ['class' => 'col-lg-4 col-md-4 col-sm-4 control-label required']) }}
+                <div class="row my-3">
+                    {{ Form::label('categories', trans('labels.backend.menus.field.type'), ['class' => 'col-lg-4 col-md-4 col-sm-4 control-label text-right required']) }}
                     <div class="col-lg-8 col-md-8 col-sm-8">
                         {{ Form::select('type', $types, null, ['class' => 'form-control tags box-size', 'required' => 'required']) }}
                     </div>
+                    <div class="col-lg-2"></div>
                 </div>
             </div>
             <div class="col-8">
-                <div class="form-group">
-                    {{ Form::label('name', trans('labels.backend.menus.field.name'), ['class' => 'col-lg-2 col-md-2 col-sm-2 control-label required']) }}
-                    <div class="col-lg-10 col-md-10 col-sm-10">
+                <div class="row my-3">
+                    {{ Form::label('name', trans('labels.backend.menus.field.name'), ['class' => 'col-lg-2 col-md-2 col-sm-2 control-label text-right required']) }}
+                    <div class="col-lg-8 col-md-10 col-sm-8">
                         {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.menus.field.name'), 'required' => 'required']) }}
                     </div>
+                    <div class="col-lg-2"></div>
                 </div>
             </div>
     </div>

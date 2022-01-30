@@ -19,6 +19,9 @@ return [
 	"table" => [
 	"id" => "Id",
 	"createdat" => "Created At",
+    "permission"=>"Permission",
+    "display_name"=>"Display Name",
+    "sort"=>"Sort",
 	],
 	],
 	"roles" => [
@@ -28,6 +31,10 @@ return [
 	"title" => "Roles",
 	"table" => [
 	"id" => "Id",
+    "role"=>"Role",
+    "permissions"=>"Permissions",
+    "number_of_users"=>"Number Of Users",
+    "sort"=>"Sort",
 	"createdat" => "Created At",
 	],
 	],
@@ -38,18 +45,44 @@ return [
 	"title" => "Menus",
 	"table" => [
 	"id" => "Id",
+    'name'=>'Name',
+    'type'=>'Type',
 	"createdat" => "Created At",
 	],
+    "field"=>[
+        "type"=>"Type",
+        'name'=>'Name',
+    ]
 	],
 	"settings" => [
 	"create" => "Create Setting",
 	"edit" => "Edit Setting",
 	"management" => "Setting Management",
 	"title" => "Settings",
+    "seo"=>"SEO Settings",
+    "companydetails"=>"Company Details",
+    "mail"=>"Mail Settings",
+    "footer"=>"Footer Settings",
+    "about"=>"About",
+    "terms"=>"Terms",
+    "google"=>"Google Analytics Track Code",
 	"table" => [
 	"id" => "Id",
 	"createdat" => "Created At",
 	],
 	],
+    // "modules"=>[
+    //     'table'=>[
+    //       'name'=>'Name',
+    //       'view_permission_id'=>'View Permission Name',
+    //       'url'=>'URL',
+    //       'created_by'=>'Created by'
+    //     ],
+    // ],
 	],
+    "general"=>[
+        "actions"=>"Action",
+        "all"=>"All",
+        "custom"=>"Custom",
+    ]
 ];

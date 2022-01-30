@@ -47,16 +47,18 @@
 		<!-- Tab panes -->
 		<div id="myTabContent" class="tab-content setting-tab">
 			<div role="tabpanel" class="tab-pane active" id="tab1">
-				<div class="form-group">
-					{{ Form::label('logo', trans('validation.attributes.backend.settings.sitelogo'), ['class' => 'col-lg-2 control-label']) }}
-					<div class="col-lg-10">
-						<div class="custom-file-input">
-							{!! Form::file('logo', array('class'=>'form-control inputfile inputfile-1' )) !!}
-							<label for="logo">
+				<div class="row my-3">
+					{{ Form::label('logo', trans('validation.attributes.backend.settings.sitelogo'), ['class' => 'col-lg-2 control-label text-right']) }}
+					<div class="col-lg-4">
+						<div class="form-group lb-file-input">
+							{!! Form::file('logo', array('class'=>'form-control inputfile inputfile-1 opacity-0' )) !!}
+							<label for="logo" class="lb-file-label" >
 								<i class="fa fa-upload"></i>
 								<span>Choose a file</span>
 							</label>
 						</div>
+						</div>
+                        <div class="col-lg-6">
 						<div class="img-remove-logo">
 							@if($setting->logo)
 							<img height="50" width="50" src="/{{ $setting->logo }}">
@@ -68,16 +70,18 @@
 				</div>
 				<!--form control-->
 
-				<div class="form-group">
-					{{ Form::label('favicon', trans('validation.attributes.backend.settings.favicon'), ['class' => 'col-lg-2 control-label'])}}
-					<div class="col-lg-10">
-						<div class="custom-file-input">
-							{!! Form::file('favicon', array('class'=>'form-control inputfile inputfile-1' )) !!}
-							<label for="favicon">
+				<div class="row my-3">
+					{{ Form::label('favicon', trans('validation.attributes.backend.settings.favicon'), ['class' => 'col-lg-2 control-label text-right'])}}
+					<div class="col-lg-4">
+						<div class="form-group lb-file-input">
+							{!! Form::file('favicon', array('class'=>'form-control inputfile inputfile-1 opacity-0' )) !!}
+							<label for="favicon" class="lb-file-label">
 								<i class="fa fa-upload"></i>
 								<span>Choose a file</span>
 							</label>
 						</div>
+                    </div>
+                    <div class="col-lg-6">
 						<div class="img-remove-favicon">
 							@if($setting->favicon)
 							<img height="50" width="50" src="{{ Storage::disk('public')->url('img/favicon/' . $setting->favicon) }}">
@@ -88,8 +92,8 @@
 					<!--col-lg-10-->
 				</div>
 				<!--form control-->
-				<div class="form-group">
-					{{ Form::label('seo_title', trans('validation.attributes.backend.settings.metatitle'), ['class' => 'col-lg-2 control-label'])}}
+                <div class="row my-3">
+					{{ Form::label('seo_title', trans('validation.attributes.backend.settings.metatitle'), ['class' => 'col-lg-2 control-label text-right'])}}
 					<div class="col-lg-10">
 						{{ Form::text('seo_title', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.metatitle')])}}
 					</div>
@@ -97,8 +101,8 @@
 				</div>
 				<!--form control-->
 
-				<div class="form-group">
-					{{ Form::label('seo_keyword', trans('validation.attributes.backend.settings.metakeyword'), ['class' => 'col-lg-2 control-label'])}}
+				<div class="row my-3">
+					{{ Form::label('seo_keyword', trans('validation.attributes.backend.settings.metakeyword'), ['class' => 'col-lg-2 control-label text-right'])}}
 					<div class="col-lg-10">
 						{{ Form::textarea('seo_keyword', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.metakeyword'),
 						'rows' => 2]) }}
@@ -107,9 +111,8 @@
 				</div>
 				<!--form control-->
 
-				<div class="form-group">
-					{{ Form::label('seo_description', trans('validation.attributes.backend.settings.metadescription'), ['class' => 'col-lg-2
-					control-label']) }}
+				<div class="row my-3">
+					{{ Form::label('seo_description', trans('validation.attributes.backend.settings.metadescription'), ['class' => 'col-lg-2 control-label text-right']) }}
 
 					<div class="col-lg-10">
 						{{ Form::textarea('seo_description', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.metadescription'),
@@ -120,45 +123,44 @@
 				<!--form control-->
 			</div>
 			<div role="tabpanel" class="tab-pane" id="tab2">
-				<div class="form-group">
-					{{ Form::label('mobile', trans('validation.attributes.backend.settings.companydetails.mobile'), ['class' => 'col-lg-2
-					control-label']) }}
+				<div class="row my-3">
+					{{ Form::label('mobile', trans('validation.attributes.backend.settings.companydetails.mobile'), ['class' => 'col-lg-2 control-label text-right']) }}
 
 					<div class="col-lg-10">
 						{{ Form::text('mobile', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.companydetails.mobile'),
 						'rows' => 2]) }}
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="row my-3">
 					{{ Form::label('email', trans('validation.attributes.backend.settings.companydetails.email'), ['class'
-					=> 'col-lg-2 control-label']) }}
+					=> 'col-lg-2 control-label text-right']) }}
 
 					<div class="col-lg-10">
 						{{ Form::text('email', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.companydetails.email'),
 						'rows' => 2]) }}
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="row my-3">
 					{{ Form::label('timing', trans('validation.attributes.backend.settings.companydetails.timing'), ['class'
-					=> 'col-lg-2 control-label']) }}
+					=> 'col-lg-2 control-label text-right']) }}
 
 					<div class="col-lg-10">
 						{{ Form::text('timing', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.companydetails.timing'),
 						'rows' => 2]) }}
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="row my-3">
 					{{ Form::label('contact_description', trans('validation.attributes.backend.settings.companydetails.contact_description'), ['class'
-					=> 'col-lg-2 control-label']) }}
+					=> 'col-lg-2 control-label text-right']) }}
 
 					<div class="col-lg-10">
 						{{ Form::text('contact_description', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.companydetails.contact_description'),
 						'rows' => 2]) }}
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="row my-3">
 					{{ Form::label('location', trans('validation.attributes.backend.settings.companydetails.location'), ['class'
-					=> 'col-lg-2 control-label']) }}
+					=> 'col-lg-2 control-label text-right']) }}
 
 					<div class="col-lg-10">
 						{{ Form::text('location', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.companydetails.location'),
@@ -168,8 +170,8 @@
 				<!--form control-->
 			</div>
 			<div role="tabpanel" class="tab-pane" id="tab3">
-				<div class="form-group">
-					{{ Form::label('from_name', trans('validation.attributes.backend.settings.mail.fromname'), ['class' => 'col-lg-2 control-label'])
+				<div class="row my-3">
+					{{ Form::label('from_name', trans('validation.attributes.backend.settings.mail.fromname'), ['class' => 'col-lg-2 control-label text-right'])
 					}}
 
 					<div class="col-lg-10">
@@ -177,8 +179,8 @@
 						'rows' => 2]) }}
 					</div>
 				</div>
-				<div class="form-group">
-					{{ Form::label('from_email', trans('validation.attributes.backend.settings.mail.fromemail'), ['class' => 'col-lg-2 control-label'])
+				<div class="row my-3">
+					{{ Form::label('from_email', trans('validation.attributes.backend.settings.mail.fromemail'), ['class' => 'col-lg-2 control-label text-right'])
 					}}
 
 					<div class="col-lg-10">
@@ -189,8 +191,8 @@
 				<!--form control-->
 			</div>
 			<div role="tabpanel" class="tab-pane" id="tab4">
-				<div class="form-group">
-					{{ Form::label('footer_text', trans('validation.attributes.backend.settings.footer.text'), ['class' => 'col-lg-2 control-label'])
+				<div class="row my-3">
+					{{ Form::label('footer_text', trans('validation.attributes.backend.settings.footer.text'), ['class' => 'col-lg-2 control-label text-right'])
 					}}
 
 					<div class="col-lg-10">
@@ -198,9 +200,8 @@
 						'rows' => 2]) }}
 					</div>
 				</div>
-				<div class="form-group">
-					{{ Form::label('copyright_text', trans('validation.attributes.backend.settings.footer.copyright'), ['class' => 'col-lg-2
-					control-label']) }}
+				<div class="row my-3">
+					{{ Form::label('copyright_text', trans('validation.attributes.backend.settings.footer.copyright'), ['class' => 'col-lg-2 control-label text-right']) }}
 
 					<div class="col-lg-10">
 						{{ Form::text('copyright_text', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.footer.copyright'),
@@ -210,24 +211,22 @@
 				<!--form control-->
 			</div>
 			<div role="tabpanel" class="tab-pane" id="tab5">
-				<div class="form-group">
-					{{ Form::label('name', trans('validation.attributes.backend.settings.termscondition.name'), ['class' => 'col-lg-2 control-label'])}}
+				<div class="row my-3">
+					{{ Form::label('name', trans('validation.attributes.backend.settings.termscondition.name'), ['class' => 'col-lg-2 control-label text-right'])}}
 
 					<div class="col-lg-10">
 						{{ Form::text('name', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.termscondition.name')])}}
 					</div>
 				</div>
-				<div class="form-group">
-					{{ Form::label('version', trans('validation.attributes.backend.settings.termscondition.version'), ['class' => 'col-lg-2
-					control-label']) }}
+				<div class="row my-3">
+					{{ Form::label('version', trans('validation.attributes.backend.settings.termscondition.version'), ['class' => 'col-lg-2 control-label text-right']) }}
 
 					<div class="col-lg-10">
 						{{ Form::text('version', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.termscondition.version')])}}
 					</div>
 				</div>
-				<div class="form-group">
-					{{ Form::label('description', trans('validation.attributes.backend.settings.termscondition.description'), ['class' => 'col-lg-2
-					control-label']) }}
+				<div class="row my-3">
+					{{ Form::label('description', trans('validation.attributes.backend.settings.termscondition.description'), ['class' => 'col-lg-2 control-label text-right']) }}
 
 					<div class="col-lg-10">
 						{{ Form::text('description', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.termscondition.description')])}}
@@ -237,9 +236,8 @@
 				<!--form control-->
 			</div>
 			<div role="tabpanel" class="tab-pane" id="tab6">
-				<div class="form-group">
-					{{ Form::label('google_analytics', trans('validation.attributes.backend.settings.google.analytic'), ['class' => 'col-lg-2
-					control-label']) }}
+				<div class="row my-3">
+					{{ Form::label('google_analytics', trans('validation.attributes.backend.settings.google.analytic'), ['class' => 'col-lg-2 control-label text-right']) }}
 
 					<div class="col-lg-10">
 						{{ Form::textarea('google_analytics', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.google.analytic')])}}
@@ -252,7 +250,7 @@
 	<!-- /.box-body -->
 	<div class="box-footer">
 		<div class="row">
-			<div class="col-lg-offset-2 col-lg-10 footer-btn">
+			<div class="col-lg-offset-2 col-lg-10 footer-btn text-center mt-3">
 				{{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
 				<div class="clearfix"></div>
 			</div>

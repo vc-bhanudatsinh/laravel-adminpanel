@@ -18,9 +18,9 @@
                 <table id="menus-table" class="table table-striped table-bordered nowrap text-center">
                     <thead>
                         <tr>
-                            <th>{{ trans('labels.backend.menu.table.name') }}</th>
-                            <th>{{ trans('labels.backend.menu.table.type') }}</th>
-                            <th>{{ trans('labels.backend.menu.table.createdat') }}</th>
+                            <th>{{ trans('labels.backend.menus.table.name') }}</th>
+                            <th>{{ trans('labels.backend.menus.table.type') }}</th>
+                            <th>{{ trans('labels.backend.menus.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>

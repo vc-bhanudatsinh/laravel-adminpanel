@@ -7,10 +7,10 @@
     {{ Form::open(['route' => 'admin.roles.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-role']) }}
 
         <div class="box box-info">
-           
+
             <div class="box-body">
                  <div class="row my-3">
-                    {{ Form::label('name', trans('validation.attributes.backend.roles.name'), ['class' => 'col-lg-2 control-label required']) }}
+                    {{ Form::label('name', trans('validation.attributes.backend.roles.name'), ['class' => 'col-lg-2 control-label  text-right required']) }}
 
                     <div class="col-lg-8">
                         {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.roles.name'), 'required' => 'required']) }}
@@ -18,8 +18,8 @@
                     <div class="col-lg-2"></div>
                 </div><!--form control-->
 
-                <div class="form-group">
-                    {{ Form::label('associated_permissions', trans('validation.attributes.backend.roles.associated_permissions'), ['class' => 'col-lg-2 control-label']) }}
+                <div class="row my-3">
+                    {{ Form::label('associated_permissions', trans('validation.attributes.backend.roles.associated_permissions'), ['class' => 'col-lg-2 control-label text-right']) }}
 
                     <div class="col-lg-8">
                         {{ Form::select('associated_permissions', array('all' => trans('labels.general.all'), 'custom' => trans('labels.general.custom')), 'all', ['class' => 'form-control select2 box-size']) }}
@@ -44,19 +44,20 @@
                             </div><!--row-->
                         </div><!--available permissions-->
                     </div><!--col-lg-3-->
+                    <div class="col-lg-2"></div>
                 </div><!--form control-->
 
-                <div class="form-group">
-                    {{ Form::label('sort', trans('validation.attributes.backend.roles.sort'), ['class' => 'col-lg-2 control-label']) }}
+                <div class="row my-3">
+                    {{ Form::label('sort', trans('validation.attributes.backend.roles.sort'), ['class' => 'col-lg-2 control-label text-right']) }}
 
                     <div class="col-lg-8">
                         {{ Form::text('sort', ($roleCount+1), ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.roles.sort')]) }}
                     </div>
-        <div class="col-lg-2"></div>
+                    <div class="col-lg-2"></div>
                 </div><!--form control-->
 
-                <div class="form-group">
-                    {{ Form::label('status', trans('validation.attributes.backend.roles.active'), ['class' => 'col-lg-2 control-label']) }}
+                <div class="row my-3">
+                    {{ Form::label('status', trans('validation.attributes.backend.roles.active'), ['class' => 'col-lg-2 control-label text-right']) }}
 
                     <div class="col-lg-8">
                         <div class="control-group">
@@ -68,8 +69,12 @@
                     </div><!--col-lg-3-->
                 </div><!--form control-->
                 <div class="edit-form-btn">
-                    {{ link_to_route('admin.roles.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                    {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
+                    <div class="row ">
+                        <div class="col-12 text-center">
+                            {{ link_to_route('admin.roles.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
+                            {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
+                        </div>
+                    </div>
                     <div class="clearfix"></div>
                 </div>
             </div><!-- /.box-body -->

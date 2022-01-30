@@ -9,11 +9,13 @@
     {{ Form::model($permission, ['route' => ['admin.permissions.update', $permission], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-permission']) }}
 
                 @include("backend.permissions.form")
+                <div class="row ">
+                    <div class="col-12 text-center">
+                        {{ link_to_route('admin.permissions.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
 
-                {{ link_to_route('admin.permissions.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                
-                {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
-       
+                        {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
+                    </div>
+                </div>
     {{ Form::close() }}
     </div>
 </div>

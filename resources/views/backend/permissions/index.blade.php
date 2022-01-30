@@ -12,15 +12,15 @@
                 @include('backend.permissions.partials.permissions-header-buttons')
             </div>
         </div>
-         
+
         <div class="table-parent py-4">
             <div class="table-responsive data-table-wrapper">
                 <table id="permissions-table" class="table table-striped table-bordered nowrap text-center">
                     <thead>
                         <tr>
-                            <th>{{ trans('labels.backend.access.permissions.table.permission') }}</th>
-                            <th>{{ trans('labels.backend.access.permissions.table.display_name') }}</th>
-                            <th>{{ trans('labels.backend.access.permissions.table.sort') }}</th>
+                            <th>{{ trans('labels.backend.permissions.table.permission') }}</th>
+                            <th>{{ trans('labels.backend.permissions.table.display_name') }}</th>
+                            <th>{{ trans('labels.backend.permissions.table.sort') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>

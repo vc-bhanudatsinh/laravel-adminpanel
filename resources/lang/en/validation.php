@@ -152,11 +152,55 @@ return [
     |--------------------------------------------------------------------------
     |
     | The following language lines are used to swap our attribute placeholder
-    | with something more reader friendly such as "E-Mail Address" instead
+    | with something more reader friendly such as "E-mail Address" instead
     | of "email". This simply helps us make our message more expressive.
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        "backend"=>[
+            "permissions"=>[
+                "name"=>"Name",
+                "display_name"=>"Display Name",
+                "sort"=>'Sort',
+            ],
+            "roles"=>[
+                "name"=>"Name",
+                "associated_permissions"=>"Associated Permissions",
+                "sort"=>'Sort',
+                'active'=>"Active",
+            ],
+            "settings"=>[
+                "sitelogo"=>"Site Logo",
+                "favicon"=>"Fav Icon",
+                "metatitle"=>"Meta Title",
+                "metakeyword"=>"Meta Keyword",
+                "metadescription"=>"Meta Description",
+                "companydetails"=>[
+                    "mobile"=>"Mobile",
+                    "email"=>"E-mail",
+                    "timing"=>"Timing",
+                    "contact_description"=>"Description",
+                    "location"=>"Location",
+                ],
+                "mail"=>[
+                    "fromname"=>"From Name",
+                    "fromemail"=>"From E-mail",
+                ],
+                "footer"=>[
+                    "text"=>"Footer Text",
+                    "copyright"=>"Copyright Text",
+                ],
+                "termscondition"=>[
+                    "name"=>"Name",
+                    "version"=>"Version",
+                    "description"=>"Description",
+                ],
+                "google"=>[
+                    "analytic"=>"Google Analytics",
+                ]
+            ],
+        ],
+    ],
 
 ];

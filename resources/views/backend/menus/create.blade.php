@@ -20,8 +20,12 @@
                 <div class="form-group">
                     @include("backend.menus.form")
                     <div class="edit-form-btn">
-                        {{ link_to_route('admin.menus.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                        {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
+                        <div class="row ">
+                            <div class="col-12 text-center">
+                                {{ link_to_route('admin.menus.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
+                                {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
+                            </div>
+                        </div>
                         <div class="clearfix"></div>
                     </div>
                 </div>
