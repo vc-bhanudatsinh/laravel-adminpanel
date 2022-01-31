@@ -1,8 +1,6 @@
 @extends ('backend.layouts.app')
 
-@section ('title')
-User Management
-@endsection
+@section ('title', trans('labels.backend.users.management'))
 
 
 @section('content')
@@ -12,7 +10,7 @@ User Management
             <div class="col-md-6"><b>Active User</b></div>
             <div class="col-md-6"> @include('backend.users.partials.actions') @include('backend.users.partials.export')</div>
         </div>
-         
+
         <div class="table-parent py-4">
            <table id="user_table" class="table table-striped table-bordered nowrap text-center">
                 <thead>
@@ -59,10 +57,10 @@ User Management
                 order: [[0, "asc"]],
                 searchDelay: 500
          });
- 
+
 
 });
 
-  
+
 </script>
 @endsection

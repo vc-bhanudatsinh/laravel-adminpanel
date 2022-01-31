@@ -5,6 +5,23 @@ return [
 	"create" => "Create User",
 	"edit" => "Edit User",
 	"management" => "User Management",
+    "show"=>"Show User",
+    "shows"=>[
+        "tabs"=>[
+            "titles"=>[
+                "details"=>"Details",
+                "other"=>"Other",
+            ],
+        ],
+    ],
+    "tabs"=>[
+       "details"=>[
+           "name"=>"Name",
+           "email"=>"E-mail",
+           "image"=>"Image",
+           "status"=>"Status",
+       ]
+    ],
 	"title" => "Users",
 	"table" => [
 	"id" => "Id",
@@ -51,9 +68,24 @@ return [
 	],
     "field"=>[
         "type"=>"Type",
-        'name'=>'Name',
+        "name"=>"Name",
     ]
 	],
+    "menu" => [
+        "field"=>[
+            "type"=>"Type",
+            "name"=>"Name",
+            "url"=>"URL",
+            "url_type"=>"URL Type",
+            "url_types"=>[
+                "route"=>"Route",
+                "static"=>"Static",
+            ],
+            "open_in_new_tab"=>"Open URL In New Tab",
+            "icon"=>"Icon Class",
+            "view_permission_id"=>"Permission",
+        ]
+    ],
 	"settings" => [
 	"create" => "Create Setting",
 	"edit" => "Edit Setting",
@@ -71,14 +103,7 @@ return [
 	"createdat" => "Created At",
 	],
 	],
-    // "modules"=>[
-    //     'table'=>[
-    //       'name'=>'Name',
-    //       'view_permission_id'=>'View Permission Name',
-    //       'url'=>'URL',
-    //       'created_by'=>'Created by'
-    //     ],
-    // ],
+
 	],
     "general"=>[
         "actions"=>"Action",

@@ -33,6 +33,6 @@ class SettingsController extends Controller
     {
         $this->setting->update($setting, $request->except(['_token', '_method']));
         Alert::toast(trans('alerts.backend.settings.updated'), 'success');
-        return redirect()->route('admin.setting.edit', $setting->id);
+        return redirect()->route('admin.settings.edit', $setting->id);
     }
 }

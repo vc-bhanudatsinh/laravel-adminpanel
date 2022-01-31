@@ -25,14 +25,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/panel.css') }}" rel="stylesheet">
     <script src="{{ asset('backend/js/panel.js') }}" defer></script>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
- <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+ {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
+ {{-- <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet"> --}}
+ <link href="{{ asset('css/bootstrap4.css') }}" rel="stylesheet">
+ <link href="{{ asset('css/datatable.css') }}" rel="stylesheet">
+ <script src="{{ asset('js/jquery.js') }}" ></script>
+ <script src="{{ asset('js/datatable.js') }}" ></script>
+ <script src="{{ asset('js/bootstrap_bundle.js') }}" ></script>
     @stack('head-styles')
     @stack('head-scripts')
     @if(!empty($google_analytics))
@@ -79,7 +78,7 @@
     </div>
 
 </body>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{{ Html::script('js/sweetalert2@11.js') }}
 <script src="{{ asset('backend/js/lb.js') }}" defer></script>
    {{ Html::script('backend/js/backend-custom.js') }}
 @yield('bottom-scripts')

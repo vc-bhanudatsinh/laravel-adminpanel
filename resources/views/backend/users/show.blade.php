@@ -1,9 +1,6 @@
 	@extends ('backend.layouts.app')
 
-@section ('title')
-User Management
-@endsection
-
+@section ('title', trans('labels.backend.users.management') . ' | ' . trans('labels.backend.users.show'))
 @section('page-header')
 <div class="w-100 d-flex justify-content-between align-items-center pt-3 px-3" style="border-bottom:2px solid #ccc;">
     <p><b class="lbindectionName text-dark">User Management</b> / View User</p>
@@ -18,15 +15,15 @@ User Management
             <div class="col-md-6"></div>
             <div class="col-md-6"> @include('backend.users.partials.actions')</div>
         </div>
-         
+
     <div class="border-top mt-3">
 		<div role="tabpanel">
 			<ul class="nav nav-tabs" role="tablist">
 				<li role="details" class="nav-item">
-					<a href="#details" class="nav-link active" role="tab" data-toggle="tab">{{ trans('labels.backend.user.show.tabs.titles.details') }}</a>
+					<a href="#details" class="nav-link active" role="tab" data-toggle="tab">{{ trans('labels.backend.users.shows.tabs.titles.details') }}</a>
 				</li>
-				<li role="other" class="nav-item"> 
-					<a href="#other" aria-controls="other" class="nav-link" role="tab" data-toggle="tab">{{ trans('labels.backend.user.show.tabs.titles.other') }}</a>
+				<li role="other" class="nav-item">
+					<a href="#other" aria-controls="other" class="nav-link" role="tab" data-toggle="tab">{{ trans('labels.backend.users.shows.tabs.titles.other') }}</a>
 				</li>
 			</ul>
             <div class="tab-content pt-4">

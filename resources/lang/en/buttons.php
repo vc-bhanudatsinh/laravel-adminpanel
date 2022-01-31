@@ -1,10 +1,11 @@
 <?php
 return [
-    'general'=>[
-        'crud'=>[
-            'create'=>'Create',
-            'update'=>'Update'
+    "general"=>[
+        "crud"=>[
+            "create"=>"Create",
+            "update"=>"Update"
         ],
-        'cancel'=>'Cancel',
+        "cancel"=>"Cancel",
+        "save"=>"Save",
     ],
 ];

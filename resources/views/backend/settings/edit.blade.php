@@ -1,24 +1,16 @@
 @extends ('backend.layouts.app')
 
-@section ('title')
- Setting
-@endsection
-
-@section('page-header')
-<div class="w-100 d-flex justify-content-between align-items-center pt-3 px-3" style="border-bottom:2px solid #ccc;">
-     <p><b class="lbindectionName text-dark">Setting Management</b> /Edit Setting</p>
-    <p></p>
- </div>
-@endsection
-
+@section ('title', trans('labels.backend.settings.management') . ' | ' . trans('labels.backend.settings.edit'))
 
 @section('content')
+<div class="p-3">
+    <div class="col-md-12 bg-white py-3 px-2 shadow-lg bordertop-5 ">
 <div class="p-3 bg-slate-200">
 {{ Form::model($setting, ['route' => ['admin.settings.update', $setting], 'class' => 'form-horizontal',
     'role' => 'form', 'method' => 'PATCH','files' => true, 'id' => 'edit-setting']) }}
 <div class="box box-info">
-	<div class="box-header">
-		<h3 class="box-title">{{ trans('labels.backend.settings.edit') }}</h3>
+	<div class="box-header mb-3" style="margin-top: -20px;" >
+		<b class="box-title">{{ trans('labels.backend.settings.edit') }}</b>
 	</div>
 	<!-- /.box-header -->
 	<div class="box-body setting-block">
@@ -257,6 +249,9 @@
 		</div>
 	</div>
 </div>
+</div>
+</div>
+</div>
 <!--box-->
 
 <!-- hidden setting id variable -->
@@ -265,9 +260,6 @@
 @endsection
 @section('bottom-scripts')
 <script>
-	$('#myTab').tabCollapse({
-		tabsClass: 'hidden-sm hidden-xs',
-		accordionClass: 'visible-sm visible-xs'
-	});
+
 </script>
 @endsection
