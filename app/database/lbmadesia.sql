@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2022 at 12:42 AM
+-- Generation Time: Jan 31, 2022 at 11:43 PM
 -- Server version: 5.7.36-0ubuntu0.18.04.1
--- PHP Version: 8.0.14
+-- PHP Version: 8.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `laravel`
+-- Database: `lbmadesia`
 --
 
 -- --------------------------------------------------------
@@ -60,7 +60,7 @@ CREATE TABLE `menus` (
 --
 
 INSERT INTO `menus` (`id`, `type`, `name`, `items`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'backend', 'Backend Sidebar Menu', '[{\"id\":16,\"name\":\"User Management\",\"url\":\"admin.users.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-user\",\"view_permission_id\":\"manage-user\",\"content\":\"User Management\"},{\"view_permission_id\":\"manage-module\",\"open_in_new_tab\":0,\"icon\":\"fa-wrench\",\"url_type\":\"route\",\"url\":\"admin.modules.index\",\"name\":\"Module\",\"id\":84,\"content\":\"Module\"},{\"id\":14,\"name\":\"Permission Management\",\"url\":\"admin.permissions.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-code-fork\",\"view_permission_id\":\"view-permission-management\",\"content\":\"Permission Management\"},{\"id\":15,\"name\":\"Role Management\",\"url\":\"admin.roles.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-star\",\"view_permission_id\":\"manage-role\",\"content\":\"Role Management\"},{\"id\":15,\"name\":\"Menu Management\",\"url\":\"admin.menus.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-bars\",\"view_permission_id\":\"manage-menu\",\"content\":\"Menu Management\"},{\"id\":9,\"name\":\"Settings\",\"url\":\"admin.settings.edit?setting=1\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-gear\",\"view_permission_id\":\"edit-setting\",\"content\":\"Setting Management\"}]', 1, NULL, '2022-01-09 13:28:53', '2022-01-09 13:28:53', NULL);
+(1, 'backend', 'Backend Sidebar Menu', '[{\"view_permission_id\":\"manage-user\",\"icon\":\"fa-user\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.users.index\",\"name\":\"User Management\",\"id\":1,\"content\":\"User Management\"},{\"id\":7,\"name\":\"Settings\",\"url\":\"admin.settings.edit\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-cogs\",\"view_permission_id\":\"edit-settings\",\"content\":\"Settings\",\"children\":[{\"id\":2,\"name\":\"Module Management\",\"url\":\"admin.modules.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-wrench\",\"view_permission_id\":\"manage-module\",\"content\":\"Module Management\"},{\"id\":3,\"name\":\"Permission Management\",\"url\":\"admin.permissions.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-code-fork\",\"view_permission_id\":\"view-permission-management\",\"content\":\"Permission Management\"},{\"id\":4,\"name\":\"Role Management\",\"url\":\"admin.roles.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-star\",\"view_permission_id\":\"manage-role\",\"content\":\"Role Management\"},{\"id\":5,\"name\":\"Menu Management\",\"url\":\"admin.menus.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-bars\",\"view_permission_id\":\"manage-menu\",\"content\":\"Menu Management\"},{\"id\":6,\"name\":\"Setting management\",\"url\":\"admin.settings.edit?setting=1\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa-gear\",\"view_permission_id\":\"edit-setting\",\"content\":\"Setting management\"}]}]', 1, NULL, '2022-01-31 12:37:42', '2022-01-31 12:37:42', NULL);
 
 -- --------------------------------------------------------
 
@@ -82,14 +82,14 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2014_10_12_200000_add_two_factor_columns_to_users_table', 1),
-(4, '2017_11_02_060149_create_modules_table', 1),
-(5, '2017_11_02_060149_create_settings_table', 1),
-(6, '2019_08_19_000000_create_failed_jobs_table', 1),
-(7, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(8, '2021_12_04_165910_create_menus_table', 1),
-(9, '2021_12_04_170022_create_pages_table', 1),
-(10, '2021_12_25_095757_laratrust_setup_tables', 1),
-(23, '2022_01_01_064810_create_sessions_table', 4);
+(4, '2017_11_02_060149_create_settings_table', 1),
+(5, '2019_08_19_000000_create_failed_jobs_table', 1),
+(6, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(7, '2021_12_04_165910_create_menus_table', 1),
+(8, '2021_12_04_170022_create_pages_table', 1),
+(9, '2021_12_25_095757_laratrust_setup_tables', 1),
+(10, '2022_01_01_064810_create_sessions_table', 1),
+(11, '2022_01_02_060149_create_modules_table', 1);
 
 -- --------------------------------------------------------
 
@@ -113,10 +113,13 @@ CREATE TABLE `modules` (
 --
 
 INSERT INTO `modules` (`id`, `view_permission_id`, `name`, `url`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
-(8, 'view-permission-permission', 'Permission Management', 'admin.permissions.index', 1, NULL, '2022-01-22 10:10:54', '2022-01-22 10:10:54'),
-(9, 'view-role-permission', 'Role Management', 'admin.roles.index', 1, NULL, '2022-01-23 07:29:44', '2022-01-23 07:29:44'),
-(10, 'view-menu-permission', 'Menu', 'admin.menus.index', 1, NULL, '2022-01-27 11:58:57', '2022-01-27 11:58:57'),
-(11, 'view-setting-permission', 'Setting', 'admin.settings.edit', 1, NULL, '2022-01-27 12:01:14', '2022-01-27 12:01:14');
+(1, 'manage-user', 'User Management', 'admin.users.index', 1, NULL, '2022-01-31 12:37:43', NULL),
+(2, 'manage-role', 'Role Management', 'admin.roles.index', 1, NULL, '2022-01-31 12:37:43', NULL),
+(3, 'manage-permissions', 'Permission Management', 'admin.permissions.index', 1, NULL, '2022-01-31 12:37:43', NULL),
+(4, 'manage-menu', 'Menu Management', 'admin.menus.index', 1, NULL, '2022-01-31 12:37:43', NULL),
+(5, 'manage-module', 'Module Management', 'admin.modules.index', 1, NULL, '2022-01-31 12:37:43', NULL),
+(6, 'edit-settings', 'Settings', 'admin.settings.edit', 1, NULL, '2022-01-31 12:37:43', NULL),
+(7, 'manage-page', 'Page Management', 'admin.pages.index', 1, NULL, '2022-01-31 12:37:43', NULL);
 
 -- --------------------------------------------------------
 
@@ -169,7 +172,7 @@ CREATE TABLE `permissions` (
   `created_by` bigint(20) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -177,73 +180,49 @@ CREATE TABLE `permissions` (
 --
 
 INSERT INTO `permissions` (`id`, `name`, `display_name`, `sort`, `status`, `description`, `created_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'view-user-management', 'View User Management', NULL, 1, NULL, NULL, '2022-01-09 13:28:51', '2022-01-09 13:28:51', NULL),
-(2, 'edit-user', 'Edit User', NULL, 1, NULL, NULL, '2022-01-09 13:28:52', '2022-01-09 13:28:52', NULL),
-(3, 'create-user', 'Create User', NULL, 1, NULL, NULL, '2022-01-09 13:28:52', '2022-01-09 13:28:52', NULL),
-(4, 'delete-user', 'Delete User', NULL, 1, NULL, NULL, '2022-01-09 13:28:52', '2022-01-09 13:28:52', NULL),
-(5, 'show-user', 'Show User', NULL, 1, NULL, NULL, '2022-01-09 13:28:52', '2022-01-09 13:28:52', NULL),
-(6, 'manage-amit', 'Manage amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
-(7, 'create-amit', 'Create amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
-(8, 'store-amit', 'Store amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
-(9, 'edit-amit', 'Edit amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
-(10, 'update-amit', 'Update amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
-(11, 'delete-amit', 'Delete amit Permission', NULL, 1, NULL, 1, '2022-01-09 14:32:54', '2022-01-09 14:32:54', NULL),
-(12, 'manage-nipun', 'Manage nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
-(13, 'create-nipun', 'Create nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
-(14, 'store-nipun', 'Store nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
-(15, 'edit-nipun', 'Edit nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
-(16, 'update-nipun', 'Update nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
-(17, 'delete-nipun', 'Delete nipun Permission', NULL, 1, NULL, 1, '2022-01-10 12:56:16', '2022-01-10 12:56:16', NULL),
-(18, 'manage-nisant', 'Manage nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
-(19, 'create-nisant', 'Create nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
-(20, 'store-nisant', 'Store nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
-(21, 'edit-nisant', 'Edit nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
-(22, 'update-nisant', 'Update nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
-(23, 'delete-nisant', 'Delete nisant Permission', NULL, 1, NULL, 1, '2022-01-10 14:38:23', '2022-01-10 14:38:23', NULL),
-(24, 'manage-mohan', 'Manage mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:37', '2022-01-10 15:20:37', NULL),
-(25, 'create-mohan', 'Create mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:37', '2022-01-10 15:20:37', NULL),
-(26, 'store-mohan', 'Store mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:38', '2022-01-10 15:20:38', NULL),
-(27, 'edit-mohan', 'Edit mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:38', '2022-01-10 15:20:38', NULL),
-(28, 'update-mohan', 'Update mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:38', '2022-01-10 15:20:38', NULL),
-(29, 'delete-mohan', 'Delete mohan Permission', NULL, 1, NULL, 1, '2022-01-10 15:20:38', '2022-01-10 15:20:38', NULL),
-(30, 'manage-ravi', 'Manage ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
-(31, 'create-ravi', 'Create ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
-(32, 'store-ravi', 'Store ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
-(33, 'edit-ravi', 'Edit ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
-(34, 'update-ravi', 'Update ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
-(35, 'delete-ravi', 'Delete ravi Permission', NULL, 1, NULL, 1, '2022-01-15 03:54:18', '2022-01-15 03:54:18', NULL),
-(36, 'manage-damini', 'Manage damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
-(37, 'create-damini', 'Create damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
-(38, 'store-damini', 'Store damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
-(39, 'edit-damini', 'Edit damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
-(40, 'update-damini', 'Update damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
-(41, 'delete-damini', 'Delete damini Permission', NULL, 1, NULL, 1, '2022-01-15 04:21:09', '2022-01-15 04:21:09', NULL),
-(42, 'manage-lbmodule', 'Manage lbmodule Permission', NULL, 1, NULL, 1, '2022-01-15 10:59:09', '2022-01-15 10:59:09', NULL),
-(43, 'manage-user', 'Manage user Permission', NULL, 1, NULL, 1, '2022-01-19 13:28:56', '2022-01-19 13:28:56', NULL),
-(45, 'manage-permission', 'Manage permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
-(46, 'create-permission', 'Create permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
-(47, 'store-permission', 'Store permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
-(48, 'edit-permission', 'Edit permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
-(49, 'update-permission', 'Update permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
-(50, 'delete-permission', 'Delete permission Permission', NULL, 1, NULL, NULL, '2022-01-22 10:10:53', '2022-01-22 10:10:53', NULL),
-(51, 'manage-role', 'Manage role Permission', NULL, 1, NULL, 1, '2022-01-23 07:29:44', '2022-01-23 07:29:44', NULL),
-(52, 'create-role', 'Create role Permission', NULL, 1, NULL, 1, '2022-01-23 07:29:44', '2022-01-23 07:29:44', NULL),
-(53, 'store-role', 'Store role Permission', NULL, 1, NULL, 1, '2022-01-23 07:29:44', '2022-01-23 07:29:44', NULL),
-(54, 'edit-role', 'Edit role Permission', NULL, 1, NULL, 1, '2022-01-23 07:29:44', '2022-01-23 07:29:44', NULL),
-(55, 'update-role', 'Update role Permission', NULL, 1, NULL, 1, '2022-01-23 07:29:44', '2022-01-23 07:29:44', NULL),
-(56, 'delete-role', 'Delete role Permission', NULL, 1, NULL, 1, '2022-01-23 07:29:44', '2022-01-23 07:29:44', NULL),
-(57, 'manage-menu', 'Manage menu Permission', NULL, 1, NULL, 1, '2022-01-27 11:58:57', '2022-01-27 11:58:57', NULL),
-(58, 'create-menu', 'Create menu Permission', NULL, 1, NULL, 1, '2022-01-27 11:58:57', '2022-01-27 11:58:57', NULL),
-(59, 'store-menu', 'Store menu Permission', NULL, 1, NULL, 1, '2022-01-27 11:58:57', '2022-01-27 11:58:57', NULL),
-(60, 'edit-menu', 'Edit menu Permission', NULL, 1, NULL, 1, '2022-01-27 11:58:57', '2022-01-27 11:58:57', NULL),
-(61, 'update-menu', 'Update menu Permission', NULL, 1, NULL, 1, '2022-01-27 11:58:57', '2022-01-27 11:58:57', NULL),
-(62, 'delete-menu', 'Delete menu Permission', NULL, 1, NULL, 1, '2022-01-27 11:58:57', '2022-01-27 11:58:57', NULL),
-(63, 'manage-setting', 'Manage setting Permission', NULL, 1, NULL, 1, '2022-01-27 12:01:13', '2022-01-27 12:01:13', NULL),
-(64, 'create-setting', 'Create setting Permission', NULL, 1, NULL, 1, '2022-01-27 12:01:14', '2022-01-27 12:01:14', NULL),
-(65, 'store-setting', 'Store setting Permission', NULL, 1, NULL, 1, '2022-01-27 12:01:14', '2022-01-27 12:01:14', NULL),
-(66, 'edit-setting', 'Edit setting Permission', NULL, 1, NULL, 1, '2022-01-27 12:01:14', '2022-01-27 12:01:14', NULL),
-(67, 'update-setting', 'Update setting Permission', NULL, 1, NULL, 1, '2022-01-27 12:01:14', '2022-01-27 12:01:14', NULL),
-(68, 'delete-setting', 'Delete setting Permission', NULL, 1, NULL, 1, '2022-01-27 12:01:14', '2022-01-27 12:01:14', NULL);
+(1, 'manage-user', 'Manage user Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:37', '2022-01-31 12:37:37', NULL),
+(2, 'create-user', 'Create user Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:37', '2022-01-31 12:37:37', NULL),
+(3, 'store-user', 'Store user Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:37', '2022-01-31 12:37:37', NULL),
+(4, 'edit-user', 'Edit user Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:37', '2022-01-31 12:37:37', NULL),
+(5, 'update-user', 'Update user Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:37', '2022-01-31 12:37:37', NULL),
+(6, 'delete-user', 'Delete user Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:37', '2022-01-31 12:37:37', NULL),
+(7, 'show-user', 'Show user Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:38', '2022-01-31 12:37:38', NULL),
+(8, 'manage-role', 'Manage role Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:38', '2022-01-31 12:37:38', NULL),
+(9, 'create-role', 'Create role Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:38', '2022-01-31 12:37:38', NULL),
+(10, 'store-role', 'Store role Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:38', '2022-01-31 12:37:38', NULL),
+(11, 'edit-role', 'Edit role Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:38', '2022-01-31 12:37:38', NULL),
+(12, 'update-role', 'Update role Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:38', '2022-01-31 12:37:38', NULL),
+(13, 'delete-role', 'Delete role Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:38', '2022-01-31 12:37:38', NULL),
+(14, 'manage-permission', 'Manage permission Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:38', '2022-01-31 12:37:38', NULL),
+(15, 'create-permission', 'Create permission Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:38', '2022-01-31 12:37:38', NULL),
+(16, 'store-permission', 'Store permission Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(17, 'edit-permission', 'Edit permission Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(18, 'update-permission', 'Update permission Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(19, 'delete-permission', 'Delete permission Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(20, 'manage-menu', 'Manage menu Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(21, 'create-menu', 'Create menu Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(22, 'store-menu', 'Store menu Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(23, 'edit-menu', 'Edit menu Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(24, 'update-menu', 'Update menu Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(25, 'delete-menu', 'Delete menu Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(26, 'manage-module', 'Manage module Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(27, 'create-module', 'Create module Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(28, 'store-module', 'Store module Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(29, 'edit-module', 'Edit module Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(30, 'update-module', 'Update module Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(31, 'delete-module', 'Delete module Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:39', '2022-01-31 12:37:39', NULL),
+(32, 'manage-setting', 'Manage setting Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:40', '2022-01-31 12:37:40', NULL),
+(33, 'create-setting', 'Create setting Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:40', '2022-01-31 12:37:40', NULL),
+(34, 'store-setting', 'Store setting Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:40', '2022-01-31 12:37:40', NULL),
+(35, 'edit-setting', 'Edit setting Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:40', '2022-01-31 12:37:40', NULL),
+(36, 'update-setting', 'Update setting Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:41', '2022-01-31 12:37:41', NULL),
+(37, 'delete-setting', 'Delete setting Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:41', '2022-01-31 12:37:41', NULL),
+(38, 'manage-page', 'Manage page Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:41', '2022-01-31 12:37:41', NULL),
+(39, 'create-page', 'Create page Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:41', '2022-01-31 12:37:41', NULL),
+(40, 'store-page', 'Store page Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:41', '2022-01-31 12:37:41', NULL),
+(41, 'edit-page', 'Edit page Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:41', '2022-01-31 12:37:41', NULL),
+(42, 'update-page', 'Update page Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:41', '2022-01-31 12:37:41', NULL),
+(43, 'delete-page', 'Delete page Permission', NULL, 1, NULL, NULL, '2022-01-31 12:37:41', '2022-01-31 12:37:41', NULL);
 
 -- --------------------------------------------------------
 
@@ -261,13 +240,13 @@ CREATE TABLE `permission_role` (
 --
 
 INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
-(37, 1),
 (1, 2),
 (2, 2),
 (3, 2),
 (4, 2),
 (5, 2),
-(6, 2);
+(6, 2),
+(7, 2);
 
 -- --------------------------------------------------------
 
@@ -310,7 +289,7 @@ CREATE TABLE `roles` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `display_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `all` int(11) NOT NULL DEFAULT '0',
-  `sort` bigint(20) DEFAULT NULL,
+  `sort` bigint(20) NOT NULL DEFAULT '0',
   `status` int(11) NOT NULL DEFAULT '1',
   `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
@@ -325,9 +304,9 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `all`, `sort`, `status`, `description`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Administrator', 'Administrator', 1, NULL, 1, 'Admin default created by Lblara', NULL, NULL, '2022-01-09 13:28:51', '2022-01-09 13:28:51', NULL),
-(2, 'Executive', 'Executive', 0, 0, 0, 'Executive default created by Lblara', NULL, 1, '2022-01-09 13:28:51', '2022-01-23 11:35:14', NULL),
-(3, 'User', 'User', 0, NULL, 1, 'User default created  by Lblara', NULL, NULL, '2022-01-09 13:28:51', '2022-01-09 13:28:51', NULL);
+(1, 'Administrator', 'Administrator', 1, 0, 1, 'Admin default created by Lblara', NULL, NULL, '2022-01-31 12:37:37', '2022-01-31 12:37:37', NULL),
+(2, 'Executive', 'Executive', 0, 0, 1, 'Executive default created by Lblara', NULL, NULL, '2022-01-31 12:37:37', '2022-01-31 12:37:37', NULL),
+(3, 'User', 'User', 0, 0, 1, 'User default created  by Lblara', NULL, NULL, '2022-01-31 12:37:37', '2022-01-31 12:37:37', NULL);
 
 -- --------------------------------------------------------
 
@@ -336,7 +315,7 @@ INSERT INTO `roles` (`id`, `name`, `display_name`, `all`, `sort`, `status`, `des
 --
 
 CREATE TABLE `role_user` (
-  `id` bigint(20) NOT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
   `role_id` bigint(20) UNSIGNED NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `user_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
@@ -349,9 +328,7 @@ CREATE TABLE `role_user` (
 INSERT INTO `role_user` (`id`, `role_id`, `user_id`, `user_type`) VALUES
 (1, 1, 1, 'App\\Models\\User'),
 (2, 2, 2, 'App\\Models\\User'),
-(3, 3, 3, 'App\\Models\\User'),
-(4, 3, 4, 'App\\Models\\User\\User'),
-(5, 3, 6, 'App\\Models\\User\\User');
+(3, 3, 3, 'App\\Models\\User');
 
 -- --------------------------------------------------------
 
@@ -373,7 +350,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('LAsxeM54q5WBWPbN7I20DUI5S2Oi67ANbQqxCkhY', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiMDlucTA4cjFQcW9IYm9lRjBlV2JCN1JobGVRS29vWGM4N1piV3NZZiI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjQyOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vbW9kdWxlcy9jcmVhdGUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkdkJ3TEhzQWlWa3ROWkRWMlJJeFBUdU41dEoyd1Y3eEVFUUhTMnVTR2dOQU16VjNLb3dDSVciO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJHZCd0xIc0FpVmt0TlpEVjJSSXhQVHVONXRKMndWN3hFRVFIUzJ1U0dnTkFNelYzS293Q0lXIjt9', 1643479627);
+('eTmuZpb8ajLu2T9zqQLli6NynOWznVHTUg50wtz6', 2, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoia2hSOXZYUnExWHZjQ1BLUk1EYzY4QTdyRFNObk94NGhodzZ4SmdQNCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9kYXNoYm9hcmQiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkNjIyWWYzR0RZVXF3ZzdnRUN2MVpTZTBodmhxSTFsenFGeUViLnBRQklIUGRnOXdrL3NJTVMiO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJDYyMllmM0dEWVVxd2c3Z0VDdjFaU2UwaHZocUkxbHpxRnlFYi5wUUJJSFBkZzl3ay9zSU1TIjt9', 1643652678);
 
 -- --------------------------------------------------------
 
@@ -409,24 +386,24 @@ CREATE TABLE `settings` (
   `explanation2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `explanation3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `explanation4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `version` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mobile` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `timing` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_description` text COLLATE utf8mb4_unicode_ci,
+  `location` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `name` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `version` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mobile` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `timing` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_description` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `location` varchar(244) COLLATE utf8mb4_unicode_ci NOT NULL
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `settings`
 --
 
-INSERT INTO `settings` (`id`, `logo`, `favicon`, `seo_title`, `seo_keyword`, `seo_description`, `company_contact`, `company_address`, `from_name`, `from_email`, `facebook`, `linkedin`, `twitter`, `google`, `copyright_text`, `footer_text`, `terms`, `disclaimer`, `google_analytics`, `home_video1`, `home_video2`, `home_video3`, `home_video4`, `explanation1`, `explanation2`, `explanation3`, `explanation4`, `created_at`, `updated_at`, `name`, `version`, `description`, `mobile`, `email`, `timing`, `contact_description`, `location`) VALUES
-(1, 'images/setting/Artboard-1443.png', NULL, 'LB admin panel boilerplate', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'LB admin panel', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-06 04:17:02', 'LB admin panel', '1.001', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', '+45 31 32 10 29', 'lbmadesia@gmail.com', '07:00 AM TO 7:00 PM CT', 'LB admin panel', 'LB admin panel');
+INSERT INTO `settings` (`id`, `logo`, `favicon`, `seo_title`, `seo_keyword`, `seo_description`, `company_contact`, `company_address`, `from_name`, `from_email`, `facebook`, `linkedin`, `twitter`, `google`, `copyright_text`, `footer_text`, `terms`, `disclaimer`, `google_analytics`, `home_video1`, `home_video2`, `home_video3`, `home_video4`, `explanation1`, `explanation2`, `explanation3`, `explanation4`, `name`, `version`, `description`, `mobile`, `email`, `timing`, `contact_description`, `location`, `created_at`, `updated_at`) VALUES
+(1, 'images/setting/logo.png', NULL, 'Lb-Madesia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Lb madesia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Lb madesia', '1.0.0', NULL, '7739261027', 'lbmadesia@gmail.com', '09:00 AM TO 6:00 PM CT', 'Lb madesia, lbmadesia@gmail.com, 7739261027', 'India', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -457,11 +434,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `passwordtext`, `remember_token`, `current_team_id`, `profile_photo_path`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Admin', 'admin@admin.com', NULL, '$2y$10$vBwLHsAiVktNZDV2RIxPTuN5tJ2wV7xEEQHS2uSGgNAMzV3KowCIW', NULL, NULL, NULL, NULL, NULL, 'backend/image/profile.jpeg', 'Enable', '2022-01-09 13:28:52', '2022-01-09 13:28:52', NULL),
-(2, 'Executive', 'executive@executive.com', NULL, '$2y$10$OQ/DFu/rH8PGDcoMkbQWH.QnHrVbY7n4PD60SJJ6iyGeYSuG1mpsC', NULL, NULL, NULL, NULL, NULL, 'backend/image/profile.jpeg', 'Enable', '2022-01-09 13:28:53', '2022-01-09 13:28:53', NULL),
-(3, 'Lb madesia', 'user@user.com', NULL, '$2y$10$I6xpEPLhUDOTf8yq10mpk.VYTWf/tl1.xyKC0Xg1OgArXqkDMhASi', NULL, NULL, NULL, NULL, NULL, 'frontend/image/profile.jpeg', 'Enable', '2022-01-09 13:28:53', '2022-01-09 13:28:53', NULL),
-(4, 'LB MADESIA', 'lbmadesia8318@gmail.com', NULL, '$2y$10$1izTqWlNDYo7YIv6STguxOj0aIQOMkH0tDvfWZZ61wS/nga1dfvla', NULL, NULL, 'JDJ5JDEwJDFpelRxV2xORFlvN1lJdjZTVGd1eE9qMGFJUU9Na0gwdER2ZldaWjYxd1MvbmdhMWRmdmxh', NULL, NULL, 'images\\users\\aj_lb190.jpg', 'Enable', '2022-01-23 11:39:25', '2022-01-23 11:49:07', '2022-01-23 11:49:07'),
-(6, 'ajay madesia', 'lbmadesia83185@gmail.com', NULL, '$2y$10$lLaL5EATtul8COkCCLPYhOs8664RoyZBoz0VZdXqwT9q95d/AnKx2', NULL, NULL, 'JDJ5JDEwJGxMYUw1RUFUdHVsOENPa0NDTFBZaE9zODY2NFJveVpCb3owVlpkWHF3VDlxOTVkL0FuS3gy', NULL, NULL, 'images\\users\\aj_lb864.jpg', 'Enable', '2022-01-23 11:43:35', '2022-01-23 11:44:13', '2022-01-23 11:44:13');
+(1, 'Admin', 'admin@admin.com', NULL, '$2y$10$IEwtICq5sa2DFbjXG/nKJuq3lHOPRHijeF4fnUcZAYadstp2jcHfq', NULL, NULL, NULL, NULL, NULL, 'backend/image/profile.jpeg', 'Enable', '2022-01-31 12:37:42', '2022-01-31 12:37:42', NULL),
+(2, 'Executive', 'executive@executive.com', NULL, '$2y$10$622Yf3GDYUqwg7gECv1ZSe0hvhqI1lzqFyEb.pQBIHPdg9wk/sIMS', NULL, NULL, NULL, NULL, NULL, 'backend/image/profile.jpeg', 'Enable', '2022-01-31 12:37:42', '2022-01-31 12:37:42', NULL),
+(3, 'Lb madesia', 'user@user.com', NULL, '$2y$10$vVtPAg3kQJ8eMLjE3zdcme97kWNEV7MR6bpnCiiFK935Dk1HwTElq', NULL, NULL, NULL, NULL, NULL, 'frontend/image/profile.jpeg', 'Enable', '2022-01-31 12:37:42', '2022-01-31 12:37:42', NULL);
 
 --
 -- Indexes for dumped tables
@@ -516,15 +491,15 @@ ALTER TABLE `permissions`
 -- Indexes for table `permission_role`
 --
 ALTER TABLE `permission_role`
-  ADD PRIMARY KEY (`permission_id`,`role_id`),
+  ADD KEY `permission_role_permission_id_foreign` (`permission_id`),
   ADD KEY `permission_role_role_id_foreign` (`role_id`);
 
 --
 -- Indexes for table `permission_user`
 --
 ALTER TABLE `permission_user`
-  ADD PRIMARY KEY (`user_id`,`permission_id`,`user_type`),
-  ADD KEY `permission_user_permission_id_foreign` (`permission_id`);
+  ADD KEY `permission_user_permission_id_foreign` (`permission_id`),
+  ADD KEY `permission_user_user_id_foreign` (`user_id`);
 
 --
 -- Indexes for table `personal_access_tokens`
@@ -546,7 +521,8 @@ ALTER TABLE `roles`
 --
 ALTER TABLE `role_user`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `role_user_role_id_foreign` (`role_id`);
+  ADD KEY `role_user_role_id_foreign` (`role_id`),
+  ADD KEY `role_user_user_id_foreign` (`user_id`);
 
 --
 -- Indexes for table `sessions`
@@ -555,6 +531,12 @@ ALTER TABLE `sessions`
   ADD PRIMARY KEY (`id`),
   ADD KEY `sessions_user_id_index` (`user_id`),
   ADD KEY `sessions_last_activity_index` (`last_activity`);
+
+--
+-- Indexes for table `settings`
+--
+ALTER TABLE `settings`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -583,13 +565,13 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `modules`
 --
 ALTER TABLE `modules`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -601,7 +583,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -619,13 +601,19 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `role_user`
 --
 ALTER TABLE `role_user`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `settings`
+--
+ALTER TABLE `settings`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -642,13 +630,15 @@ ALTER TABLE `permission_role`
 -- Constraints for table `permission_user`
 --
 ALTER TABLE `permission_user`
-  ADD CONSTRAINT `permission_user_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `permission_user_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `permission_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `role_user`
 --
 ALTER TABLE `role_user`
-  ADD CONSTRAINT `role_user_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `role_user_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `role_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
