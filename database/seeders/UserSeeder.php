@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
-use App\Models\Permission;
 use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
@@ -37,6 +36,6 @@ class UserSeeder extends Seeder
         $admin->attachRole(1);
         $executive->attachRole(2);
         $user->attachRole(3);
-    
+
     }
 }

@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -17,51 +17,37 @@ class ModulesTableSeeder extends Seeder
 
         $modules = [
             [
-                'name'                  => trans('menus.backend.access.title'),
-                'url'                   => null,
-                'view_permission_id'    => 'view-access-management',
+                'name'                  => trans('labels.backend.users.management'),
+                'url'                   => 'admin.users.index',
+                'view_permission_id'    => 'manage-user',
                 'created_by'            => 1,
                 'created_at'            => Carbon::now(),
             ],
             [
-                'name'                  => trans('labels.backend.access.users.management'),
-                'url'                   => 'admin.access.user.index',
-                'view_permission_id'    => 'view-user-management',
+                'name'                  => trans('labels.backend.roles.management'),
+                'url'                   => 'admin.roles.index',
+                'view_permission_id'    => 'manage-role',
                 'created_by'            => 1,
                 'created_at'            => Carbon::now(),
             ],
             [
-                'name'                  => trans('labels.backend.access.roles.management'),
-                'url'                   => 'admin.access.role.index',
-                'view_permission_id'    => 'view-role-management',
+                'name'                  => trans('labels.backend.permissions.management'),
+                'url'                   => 'admin.permissions.index',
+                'view_permission_id'    => 'manage-permissions',
                 'created_by'            => 1,
                 'created_at'            => Carbon::now(),
             ],
             [
-                'name'                  => trans('labels.backend.access.permissions.management'),
-                'url'                   => 'admin.access.permission.index',
-                'view_permission_id'    => 'view-permission-management',
-                'created_by'            => 1,
-                'created_at'            => Carbon::now(),
-            ],
-            [
-                'name'                  => trans('labels.backend.menus.title'),
+                'name'                  => trans('labels.backend.menus.management'),
                 'url'                   => 'admin.menus.index',
-                'view_permission_id'    => 'view-menu',
+                'view_permission_id'    => 'manage-menu',
                 'created_by'            => 1,
                 'created_at'            => Carbon::now(),
             ],
             [
-                'name'                  => trans('labels.backend.modules.title'),
+                'name'                  => trans('labels.backend.modules.management'),
                 'url'                   => 'admin.modules.index',
-                'view_permission_id'    => 'view-module',
-                'created_by'            => 1,
-                'created_at'            => Carbon::now(),
-            ],
-            [
-                'name'                  => trans('labels.backend.pages.title'),
-                'url'                   => 'admin.pages.index',
-                'view_permission_id'    => 'view-page',
+                'view_permission_id'    => 'manage-module',
                 'created_by'            => 1,
                 'created_at'            => Carbon::now(),
             ],
@@ -73,37 +59,9 @@ class ModulesTableSeeder extends Seeder
                 'created_at'            => Carbon::now(),
             ],
             [
-                'name'                  => trans('menus.backend.blog.management'),
-                'url'                   => null,
-                'view_permission_id'    => 'view-blog',
-                'created_by'            => 1,
-                'created_at'            => Carbon::now(),
-            ],
-            [
-                'name'                  => trans('menus.backend.blogcategories.management'),
-                'url'                   => 'admin.blogcategories.index',
-                'view_permission_id'    => 'view-blog-category',
-                'created_by'            => 1,
-                'created_at'            => Carbon::now(),
-            ],
-            [
-                'name'                  => trans('menus.backend.blogtags.management'),
-                'url'                   => 'admin.blogtags.index',
-                'view_permission_id'    => 'view-blog-tag',
-                'created_by'            => 1,
-                'created_at'            => Carbon::now(),
-            ],
-            [
-                'name'                  => trans('menus.backend.blog.management'),
-                'url'                   => 'admin.blogs.index',
-                'view_permission_id'    => 'view-blog',
-                'created_by'            => 1,
-                'created_at'            => Carbon::now(),
-            ],
-            [
-                'name'                  => trans('menus.backend.faqs.management'),
-                'url'                   => 'admin.faqs.index',
-                'view_permission_id'    => 'view-faq',
+                'name'                  => trans('labels.backend.pages.management'),
+                'url'                   => 'admin.pages.index',
+                'view_permission_id'    => 'manage-page',
                 'created_by'            => 1,
                 'created_at'            => Carbon::now(),
             ],

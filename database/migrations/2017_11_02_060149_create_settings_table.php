@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateSettingsTable extends Migration
 {
@@ -40,6 +41,14 @@ class CreateSettingsTable extends Migration
             $table->string('explanation2', 191)->nullable();
             $table->string('explanation3', 191)->nullable();
             $table->string('explanation4', 191)->nullable();
+            $table->string('name', 191)->nullable();
+            $table->string('version', 191)->nullable();
+            $table->string('description', 191)->nullable();
+            $table->string('mobile', 191)->nullable();
+            $table->string('email', 191)->nullable();
+            $table->string('timing', 191)->nullable();
+            $table->text('contact_description',65535)->nullable();
+            $table->string('location',191)->nullable();
             $table->timestamps();
         });
     }

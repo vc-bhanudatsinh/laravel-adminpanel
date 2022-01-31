@@ -76,6 +76,7 @@ return [
             "type"=>"Type",
             "name"=>"Name",
             "url"=>"URL",
+            "icon_title"=>"Font awesome class. eg. fa-lb",
             "url_type"=>"URL Type",
             "url_types"=>[
                 "route"=>"Route",
@@ -103,7 +104,12 @@ return [
 	"createdat" => "Created At",
 	],
 	],
-
+    "pages"=>[
+        "management" => "Page Management",
+    ],
+    "modules"=>[
+        "management" => "Module Management",
+    ],
 	],
     "general"=>[
         "actions"=>"Action",

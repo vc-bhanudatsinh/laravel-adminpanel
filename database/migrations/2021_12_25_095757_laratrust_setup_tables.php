@@ -50,8 +50,8 @@ class LaratrustSetupTables extends Migration
 
             $table->foreign('role_id')->references('id')->on('roles')
                 ->onUpdate('cascade')->onDelete('cascade');
-
-            $table->primary(['user_id', 'role_id', 'user_type']);
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onUpdate('cascade')->onDelete('cascade');
         });
 
         // Create table for associating permissions to users (Many To Many Polymorphic)
@@ -62,8 +62,8 @@ class LaratrustSetupTables extends Migration
 
             $table->foreign('permission_id')->references('id')->on('permissions')
                 ->onUpdate('cascade')->onDelete('cascade');
-
-            $table->primary(['user_id', 'permission_id', 'user_type']);
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onUpdate('cascade')->onDelete('cascade');
         });
 
         // Create table for associating permissions to roles (Many-to-Many)
@@ -75,8 +75,6 @@ class LaratrustSetupTables extends Migration
                 ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('role_id')->references('id')->on('roles')
                 ->onUpdate('cascade')->onDelete('cascade');
-
-            $table->primary(['permission_id', 'role_id']);
         });
     }
 

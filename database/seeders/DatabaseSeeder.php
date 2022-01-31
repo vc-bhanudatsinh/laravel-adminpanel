@@ -7,6 +7,8 @@ use App\Models\User;
 use Database\Seeders\RoleSeeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\MenuSeeder;
+use Database\Seeders\ModulesTableSeeder;
+use Database\Seeders\SettingsTableSeeder;
 use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
@@ -18,9 +20,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        RoleSeeder::run();
-        UserSeeder::run();
-        MenuSeeder::run();
+        $RoleSeeder = new RoleSeeder();
+        $RoleSeeder->run();
+        $UserSeeder = new UserSeeder();
+        $UserSeeder->run();
+        $MenuSeeder = new MenuSeeder();
+        $MenuSeeder->run();
+        $SettingsTableSeeder = new SettingsTableSeeder();
+        $SettingsTableSeeder->run();
+        $ModulesTableSeeder = new ModulesTableSeeder();
+        $ModulesTableSeeder->run();
         // User::factory(20)->create();
     }
 }
