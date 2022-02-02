@@ -20,7 +20,6 @@
                     <div class="spinner-2"></div>
                 </div>
             </div>
-            {{-- <h1 class="text-white text-center">LBM</h1> --}}
             <p class="text-white text-center"> &nbsp; LARAVEL PROJECT STARTUP</p>
         </div>
         <div class="px-4">
@@ -68,7 +67,6 @@
                             <input type="password" class="form-control border-0 rounded-0 company-password  @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" >
                             <label class="float-right">
                                 {{-- start forget password --}}
-                                {{-- <a href="" class="text-white">Forget Password</a> --}}
                                 @if (Route::has('password.request'))
                                 <a class="underline text-sm text-white hover:text-white-900" href="{{ route('password.request') }}">
                                     {{ __('Forgot your password?') }}

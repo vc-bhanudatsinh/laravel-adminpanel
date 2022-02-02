@@ -9,7 +9,7 @@
      {{-- <link rel="icon" sizes="16x16" type="image/png" href="{{route('frontend.index')}}/img/favicon_icon/{{settings()->favicon}}"> --}}
 
      <title>@yield('title', app_name())</title>
-     <script src="{{ asset('js/app.js') }}" defer></script>
+     <script src="{{ mix('js/app.js') }}" defer></script>
 
         <!-- Meta -->
         <meta name="description" content="@yield('meta_description', 'Default Description')">
@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/panel.css') }}" rel="stylesheet">
     <script src="{{ asset('backend/js/panel.js') }}" defer></script>
 

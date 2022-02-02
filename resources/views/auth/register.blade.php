@@ -20,7 +20,6 @@
                     <div class="spinner-2"></div>
                 </div>
             </div>
-            {{-- <h1 class="text-white text-center">LBM</h1> --}}
             <p class="text-white text-center"> &nbsp; LARAVEL PROJECT STARTUP</p>
         </div>
         <div class="px-4">
