@@ -18,9 +18,11 @@
         "livewire/livewire": "^2.5",
         "realrashid/sweet-alert": "^4.1",
         "santigarcor/laratrust": "^6.3",
+        "spatie/laravel-backup": "v7",
         "yajra/laravel-datatables-oracle": "^9.18"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
