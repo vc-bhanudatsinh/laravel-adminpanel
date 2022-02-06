@@ -47,7 +47,7 @@ return [
 	],
 
     "language-picker" => [
-        "language" => "Language",
+        "language" => "भाषा",
         "langs" => [
         "ar" => "Arabic",
         "da" => "Danish",

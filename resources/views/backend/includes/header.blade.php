@@ -7,11 +7,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item dropdown">
+                            @include('backend.includes.partials.lang')
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
                          <img style="width:40px; height:35px; border-radius: 50%;margin-right:10px;" src="{{ asset(Auth::user()->profile_photo_path) }}"/>
                             <li class="nav-item dropdown">
                                 @include('backend.includes.partials.profile_dropdown')

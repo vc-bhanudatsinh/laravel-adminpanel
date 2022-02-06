@@ -33,9 +33,7 @@
     <script src="{{ asset('js/bootstrap_bundle.js') }}" ></script>
     @stack('head-styles')
     @stack('head-scripts')
-    @if(!empty($google_analytics))
-        {{$google_analytics}}
-    @endif
+
 </head>
 <body>
     <div id="app" >
@@ -52,7 +50,7 @@
                    @php $user = Auth::user();
                     $roles = $user->roles->first()->id;
                     @endphp
-                    @if($roles == "3")
+                    @if($roles == "2")
                        @include('backend.includes.sidebar')
                     @else
                     @include('backend.includes.sidebar-dynamic')

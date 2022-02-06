@@ -21,6 +21,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboardd', function () 
     return view('dashboard');
 })->name('dashboard');
 
+Route::get('lang/{lang}', 'LanguageController@swap');
+
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     includeRouteFiles(__DIR__ . '/Frontend/');
 });

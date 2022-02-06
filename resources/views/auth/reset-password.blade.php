@@ -54,7 +54,6 @@
 
                     </div>
                 </form>
-            {{-- </x-jet-authentication-card> --}}
         </div>
     </div>
 </div>
