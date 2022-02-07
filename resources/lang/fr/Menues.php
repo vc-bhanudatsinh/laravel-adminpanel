@@ -4,7 +4,7 @@ return [
 
     'backend' => [
         'sidebar' => [
-            'dashboard'=>'Dashboard',
+            'dashboard'=>'Tableau de bord',
         ],
     ],
 ];

@@ -2,10 +2,10 @@
 return [
     "general"=>[
         "crud"=>[
-            "create"=>"Create",
-            "update"=>"Update"
+            "create"=>"सृजन करना",
+            "update"=>"अद्यतन"
         ],
-        "cancel"=>"Cancel",
-        "save"=>"Save",
+        "cancel"=>"रद्द करें",
+        "save"=>"सहेजें",
     ],
 ];

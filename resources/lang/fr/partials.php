@@ -2,11 +2,11 @@
 return [
   "backend"=>[
     'export'=>[
-        'copy'=>'Copy',
-        'csv'=>'Csv',
-        'excel'=>'Excel',
-        'pdf'=>'Pdf',
-        'print'=>'print',
+        'copy'=>'Copie',
+        'csv'=>'CSV',
+        'excel'=>'Exceller',
+        'pdf'=>'PDF',
+        'print'=>'imprimer',
     ],
   ],
 ];

@@ -2,10 +2,10 @@
 return [
     "general"=>[
         "crud"=>[
-            "create"=>"Create",
-            "update"=>"Update"
+            "create"=>"Créer",
+            "update"=>"Mettre à jour"
         ],
-        "cancel"=>"Cancel",
-        "save"=>"Save",
+        "cancel"=>"Annuler",
+        "save"=>"Sauvegarder",
     ],
 ];

@@ -1,6 +1,6 @@
 <?php
 return [
     "backend"=>[
-        "something_went_wrong"=>"Something went wrong! Please try again later.",
+        "something_went_wrong"=>"Quelque chose c'est mal passé. Merci d'essayer plus tard.",
     ]
 ];

@@ -2,29 +2,29 @@
 return [
 	"backend" => [
 	"users" => [
-	"created" => "The User was successfully created.",
-	"deleted" => "The User was successfully deleted.",
-	"updated" => "The User was successfully updated.",
+	"created" => "उपयोगकर्ता सफलतापूर्वक बनाया गया था।",
+	"deleted" => "उपयोगकर्ता को सफलतापूर्वक हटा दिया गया था।",
+	"updated" => "उपयोगकर्ता को सफलतापूर्वक अपडेट किया गया था।",
 	],
 	"permissions" => [
-	"created" => "The Permission was successfully created.",
-	"deleted" => "The Permission was successfully deleted.",
-	"updated" => "The Permission was successfully updated.",
+	"created" => "अनुमति सफलतापूर्वक बनाई गई थी।",
+	"deleted" => "अनुमति सफलतापूर्वक हटा दी गई थी।",
+	"updated" => "अनुमति सफलतापूर्वक अपडेट की गई थी।",
 	],
 	"roles" => [
-	"created" => "The Role was successfully created.",
-	"deleted" => "The Role was successfully deleted.",
-	"updated" => "The Role was successfully updated.",
+	"created" => "भूमिका सफलतापूर्वक बनाई गई थी।",
+	"deleted" => "भूमिका सफलतापूर्वक हटा दी गई थी।",
+	"updated" => "भूमिका सफलतापूर्वक अपडेट की गई थी।",
 	],
 	"menus" => [
-	"created" => "The Menu was successfully created.",
-	"deleted" => "The Menu was successfully deleted.",
-	"updated" => "The Menu was successfully updated.",
+	"created" => "मेनू सफलतापूर्वक बनाया गया था।",
+	"deleted" => "मेनू सफलतापूर्वक हटा दिया गया था।",
+	"updated" => "मेनू सफलतापूर्वक अपडेट किया गया था।",
 	],
 	"settings" => [
-	"created" => "The Setting was successfully created.",
-	"deleted" => "The Setting was successfully deleted.",
-	"updated" => "The Setting was successfully updated.",
+	"created" => "सेटिंग सफलतापूर्वक बनाई गई थी।",
+	"deleted" => "सेटिंग को सफलतापूर्वक हटा दिया गया था।",
+	"updated" => "सेटिंग को सफलतापूर्वक अपडेट किया गया था।",
 	],
 	],
 ];

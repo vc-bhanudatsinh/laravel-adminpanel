@@ -2,29 +2,29 @@
 return [
 	"backend" => [
 	"users" => [
-	"created" => "The User was successfully created.",
-	"deleted" => "The User was successfully deleted.",
-	"updated" => "The User was successfully updated.",
+	"created" => "L'utilisateur a été créé avec succès.",
+	"deleted" => "L'utilisateur a été supprimé avec succès.",
+	"updated" => "L'utilisateur a été mis à jour avec succès.",
 	],
 	"permissions" => [
-	"created" => "The Permission was successfully created.",
-	"deleted" => "The Permission was successfully deleted.",
-	"updated" => "The Permission was successfully updated.",
+	"created" => "L'autorisation a été créée avec succès.",
+	"deleted" => "L'autorisation a été supprimée avec succès.",
+	"updated" => "L'autorisation a été mise à jour avec succès.",
 	],
 	"roles" => [
-	"created" => "The Role was successfully created.",
-	"deleted" => "The Role was successfully deleted.",
-	"updated" => "The Role was successfully updated.",
+	"created" => "Le rôle a été créé avec succès.",
+	"deleted" => "Le rôle a été supprimé avec succès.",
+	"updated" => "Le rôle a été mis à jour avec succès.",
 	],
 	"menus" => [
-	"created" => "The Menu was successfully created.",
-	"deleted" => "The Menu was successfully deleted.",
-	"updated" => "The Menu was successfully updated.",
+	"created" => "Le menu a été créé avec succès.",
+	"deleted" => "Le menu a été supprimé avec succès.",
+	"updated" => "Le menu a été mis à jour avec succès.",
 	],
 	"settings" => [
-	"created" => "The Setting was successfully created.",
-	"deleted" => "The Setting was successfully deleted.",
-	"updated" => "The Setting was successfully updated.",
+	"created" => "Le paramètre a été créé avec succès.",
+	"deleted" => "Le paramètre a été supprimé avec succès.",
+	"updated" => "Le paramètre a été mis à jour avec succès.",
 	],
 	],
 ];

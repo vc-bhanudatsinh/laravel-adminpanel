@@ -3,7 +3,7 @@
 return [
 
     'backend' => [
-            'dashboard' => 'Dashboard',
-            'profile'=>'Profile',
+            'dashboard' => 'डैशबोर्ड',
+            'profile'=>'प्रोफ़ाइल',
     ],
 ];
