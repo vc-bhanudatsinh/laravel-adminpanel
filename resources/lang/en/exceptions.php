@@ -36,5 +36,12 @@ return [
 	"not_found" => "That Setting does not exist.",
 	"update_error" => "There was a problem updating this Setting. Please try again.",
 	],
+	"pages" => [
+	"already_exists" => "That Page already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Page. Please try again.",
+	"delete_error" => "There was a problem deleting this Page. Please try again.",
+	"not_found" => "That Page does not exist.",
+	"update_error" => "There was a problem updating this Page. Please try again.",
+	],
 	],
 ];

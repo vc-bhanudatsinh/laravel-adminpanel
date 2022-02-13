@@ -5,23 +5,23 @@ return [
 	"create" => "Create User",
 	"edit" => "Edit User",
 	"management" => "User Management",
-    "show"=>"Show User",
-    "shows"=>[
-        "tabs"=>[
-            "titles"=>[
-                "details"=>"Details",
-                "other"=>"Other",
-            ],
-        ],
-    ],
-    "tabs"=>[
-       "details"=>[
-           "name"=>"Name",
-           "email"=>"E-mail",
-           "image"=>"Image",
-           "status"=>"Status",
-       ]
-    ],
+	"show" => "Show User",
+	"shows" => [
+	"tabs" => [
+	"titles" => [
+	"details" => "Details",
+	"other" => "Other",
+	],
+	],
+	],
+	"tabs" => [
+	"details" => [
+	"name" => "Name",
+	"email" => "E-mail",
+	"image" => "Image",
+	"status" => "Status",
+	],
+	],
 	"title" => "Users",
 	"table" => [
 	"id" => "Id",
@@ -36,9 +36,9 @@ return [
 	"table" => [
 	"id" => "Id",
 	"createdat" => "Created At",
-    "permission"=>"Permission",
-    "display_name"=>"Display Name",
-    "sort"=>"Sort",
+	"permission" => "Permission",
+	"display_name" => "Display Name",
+	"sort" => "Sort",
 	],
 	],
 	"roles" => [
@@ -48,10 +48,10 @@ return [
 	"title" => "Roles",
 	"table" => [
 	"id" => "Id",
-    "role"=>"Role",
-    "permissions"=>"Permissions",
-    "number_of_users"=>"Number Of Users",
-    "sort"=>"Sort",
+	"role" => "Role",
+	"permissions" => "Permissions",
+	"number_of_users" => "Number Of Users",
+	"sort" => "Sort",
 	"createdat" => "Created At",
 	],
 	],
@@ -62,58 +62,65 @@ return [
 	"title" => "Menus",
 	"table" => [
 	"id" => "Id",
-    'name'=>'Name',
-    'type'=>'Type',
+	"name" => "Name",
+	"type" => "Type",
 	"createdat" => "Created At",
 	],
-    "field"=>[
-        "type"=>"Type",
-        "name"=>"Name",
-    ]
+	"field" => [
+	"type" => "Type",
+	"name" => "Name",
 	],
-    "menu" => [
-        "field"=>[
-            "type"=>"Type",
-            "name"=>"Name",
-            "url"=>"URL",
-            "icon_title"=>"Font awesome class. eg. fa-lb",
-            "url_type"=>"URL Type",
-            "url_types"=>[
-                "route"=>"Route",
-                "static"=>"Static",
-            ],
-            "open_in_new_tab"=>"Open URL In New Tab",
-            "icon"=>"Icon Class",
-            "view_permission_id"=>"Permission",
-        ]
-    ],
+	],
+	"menu" => [
+	"field" => [
+	"type" => "Type",
+	"name" => "Name",
+	"url" => "URL",
+	"icon_title" => "Font awesome class. eg. fa-lb",
+	"url_type" => "URL Type",
+	"url_types" => [
+	"route" => "Route",
+	"static" => "Static",
+	],
+	"open_in_new_tab" => "Open URL In New Tab",
+	"icon" => "Icon Class",
+	"view_permission_id" => "Permission",
+	],
+	],
 	"settings" => [
 	"create" => "Create Setting",
 	"edit" => "Edit Setting",
 	"management" => "Setting Management",
 	"title" => "Settings",
-    "seo"=>"SEO Settings",
-    "companydetails"=>"Company Details",
-    "mail"=>"Mail Settings",
-    "footer"=>"Footer Settings",
-    "about"=>"About",
-    "terms"=>"Terms",
-    "google"=>"Google Analytics Track Code",
+	"seo" => "SEO Settings",
+	"companydetails" => "Company Details",
+	"mail" => "Mail Settings",
+	"footer" => "Footer Settings",
+	"about" => "About",
+	"terms" => "Terms",
+	"google" => "Google Analytics Track Code",
 	"table" => [
 	"id" => "Id",
 	"createdat" => "Created At",
 	],
 	],
-    "pages"=>[
-        "management" => "Page Management",
-    ],
-    "modules"=>[
-        "management" => "Module Management",
-    ],
+	"pages" => [
+	"create" => "Create Page",
+	"edit" => "Edit Page",
+	"management" => "Page Management",
+	"title" => "Pages",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
 	],
-    "general"=>[
-        "actions"=>"Action",
-        "all"=>"All",
-        "custom"=>"Custom",
-    ]
+	],
+	"modules" => [
+	"management" => "Module Management",
+	],
+	],
+	"general" => [
+	"actions" => "Action",
+	"all" => "All",
+	"custom" => "Custom",
+	],
 ];

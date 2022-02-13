@@ -26,5 +26,10 @@ return [
 	"deleted" => "The Setting was successfully deleted.",
 	"updated" => "The Setting was successfully updated.",
 	],
+	"pages" => [
+	"created" => "The Page was successfully created.",
+	"deleted" => "The Page was successfully deleted.",
+	"updated" => "The Page was successfully updated.",
+	],
 	],
 ];

@@ -8,6 +8,7 @@ return [
 	"show" => "Afficher l'utilisateur",
 	"management" => "Gestion des utilisateurs",
 	"main" => "Utilisatrices",
+    "import"=> "Importation d'utilisateurs",
 	],
 	"permissions" => [
 	"all" => "Toutes les autorisations",

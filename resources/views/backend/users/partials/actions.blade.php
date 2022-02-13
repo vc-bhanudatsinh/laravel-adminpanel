@@ -4,9 +4,9 @@
     Action
     </button>
     <div class="dropdown-menu">
-        <a class="dropdown-item" href="{{route('admin.users.index')}}"><i class="fa fa-list-ul"></i> All User</a>
-        <a class="dropdown-item" href="{{route('admin.users.create')}}"><i class="fa fa-plus"></i> Create User</a>
-        <a class="dropdown-item" href="{{route('admin.users.create')}}"><i class="fa fa-file"></i> Import User</a>
+        <a class="dropdown-item" href="{{route('admin.users.index')}}"><i class="fa fa-list-ul"></i> {{ trans('menus.backend.users.all') }}</a>
+        <a class="dropdown-item" href="{{route('admin.users.create')}}"><i class="fa fa-plus"></i> {{ trans('menus.backend.users.create') }}</a>
+        <a class="dropdown-item" href="{{route('admin.users.create')}}"><i class="fa fa-file"></i> {{ trans('menus.backend.users.import') }}</a>
     </div>
     </div>
 </div>

@@ -178,7 +178,8 @@ return [
         App\Providers\JetstreamServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
          // Spatie\Backup\BackupServiceProvider::class,
-        Lbmadesia\Generator\Provider\CrudGeneratorServiceProvider::class
+        Lbmadesia\Generator\Provider\CrudGeneratorServiceProvider::class,
+        Lbmadesia\ApiGenerator\Provider\ApiCrudGeneratorServiceProvider::class
 
     ],
 

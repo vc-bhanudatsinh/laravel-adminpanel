@@ -21,4 +21,7 @@ return [
 	"settings" => [
 	"table" => "settings",
 	],
+	"pages" => [
+	"table" => "pages",
+	],
 ];

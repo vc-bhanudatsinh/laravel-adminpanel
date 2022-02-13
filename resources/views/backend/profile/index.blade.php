@@ -1,6 +1,7 @@
 @extends ('backend.layouts.app')
 
 @section ('title', trans('navs.backend.profile'))
+
 @push('head-styles')
     @livewireStyles
 @endpush

@@ -13,3 +13,5 @@ require __DIR__.'/Permission.php';
 require __DIR__.'/Role.php';
 require __DIR__.'/Menu.php';
 require __DIR__.'/Setting.php';
+
+require __DIR__.'/Page.php';
