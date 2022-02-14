@@ -22,4 +22,26 @@ trait PageAttribute
                 '.$this->getDeleteButtonAttribute("delete-page", "admin.pages.destroy").'
                 </div>';
     }
+
+
+        /**
+     * @return string
+     */
+    public function getStatusLabelAttribute()
+    {
+        if ($this->isActive()) {
+            return "<label class='badge badge-success'>".trans('labels.general.active').'</label>';
+        }
+
+        return "<label class='badge badge-danger'>".trans('labels.general.inactive').'</label>';
+    }
+
+      /**
+     * @return bool
+     */
+    public function isActive()
+    {
+        return $this->status == 1;
+    }
+
 }

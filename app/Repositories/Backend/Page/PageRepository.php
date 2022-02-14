@@ -28,11 +28,16 @@ class PageRepository extends BaseRepository
     public function getForDataTable()
     {
         return $this->query()
-            ->select([
-                config('module.pages.table').'.id',
-                config('module.pages.table').'.created_at',
-                config('module.pages.table').'.updated_at',
-            ]);
+        ->leftjoin('users','users.id', '=',config('module.pages.table').'.created_by')
+        ->select([
+            config('module.pages.table').'.id',
+            config('module.pages.table').'.title',
+            config('module.pages.table').'.page_slug',
+            config('module.pages.table').'.status',
+            config('module.pages.table').'.created_at',
+            config('module.pages.table').'.updated_at',
+            'users.name as created_by',
+        ]);
     }
 
     /**
@@ -44,7 +49,8 @@ class PageRepository extends BaseRepository
      */
     public function create(array $input)
     {
-        if ($Page::create($input)) {
+        $input['page_slug'] = str_replace(" ","-",$input['title']);
+        if (Page::create($input)) {
             return true;
         }
         throw new GeneralException(trans('exceptions.backend.pages.create_error'));
@@ -60,6 +66,7 @@ class PageRepository extends BaseRepository
      */
     public function update(Page $page, array $input)
     {
+        $input['page_slug'] = str_replace(" ","-",$input['title']);
     	if ($page->update($input))
             return true;
 

@@ -200,6 +200,15 @@ return [
                     "analytic"=>"Google Analytics",
                 ]
             ],
+            "pages"=>[
+                "title"=>"title",
+                "description"=>"Description",
+                "cannonical_link"=>"Custom Link",
+                "seo_title"=>"SEO Title",
+                "seo_keyword"=>"SEO Keyword",
+                "seo_description"=>"SEO Description",
+                "is_active"=>"Active",
+            ],
         ],
     ],
 

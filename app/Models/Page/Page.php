@@ -6,10 +6,12 @@ use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Page\Traits\PageAttribute;
 use App\Models\Page\Traits\PageRelationship;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Page extends Model
 {
     use ModelTrait,
+        SoftDeletes,
         PageAttribute,
     	PageRelationship {
             // PageAttribute::getEditButtonAttribute insteadof ModelTrait;
@@ -26,20 +28,14 @@ class Page extends Model
      */
     protected $table = 'pages';
 
-    /**
-     * Mass Assignable fields of model
-     * @var array
-     */
-    protected $fillable = [
-
-    ];
 
     /**
-     * Default values for model fields
+     * The default values for attributes.
+     *
      * @var array
      */
     protected $attributes = [
-
+        'created_by' => 1,
     ];
 
 
@@ -49,7 +45,7 @@ class Page extends Model
      * @var array
      */
     protected $hidden = [
-       
+
     ];
 
     /**

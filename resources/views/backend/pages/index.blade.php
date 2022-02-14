@@ -12,14 +12,16 @@
                 @include('backend.pages.partials.pages-header-buttons')
             </div>
         </div>
-         
+
         <div class="table-parent py-4">
             <div class="table-responsive data-table-wrapper">
                 <table id="pages-table" class="table table-striped table-bordered nowrap text-center">
                     <thead>
                         <tr>
-                            <th>{{ trans('labels.backend.pages.table.id') }}</th>
+                            <th>{{ trans('labels.backend.pages.table.title') }}</th>
+                            <th>{{ trans('labels.backend.pages.table.status') }}</th>
                             <th>{{ trans('labels.backend.pages.table.createdat') }}</th>
+                            <th>{{ trans('labels.backend.pages.table.createdby') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>
@@ -49,8 +51,10 @@
                     type: 'post'
                 },
                 columns: [
-                    {data: 'id', name: '{{config('module.pages.table')}}.id'},
+                    {data: 'title', name: '{{config('module.pages.table')}}.title'},
+                    {data: 'status', name: '{{config('module.pages.table')}}.status'},
                     {data: 'created_at', name: '{{config('module.pages.table')}}.created_at'},
+                    {data: 'created_by', name: 'users.name'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
                 order: [[0, "asc"]],

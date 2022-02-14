@@ -37,9 +37,15 @@ class PagesTableController extends Controller
     public function __invoke(ManagePageRequest $request)
     {
         return Datatables::of($this->page->getForDataTable())
-            ->escapeColumns(['id'])
+            ->escapeColumns(['title'])
+            ->addColumn('status', function ($page) {
+                return $page->status_label;
+            })
             ->addColumn('created_at', function ($page) {
-                return Carbon::parse($page->created_at)->toDateString();
+                return $page->created_at->toDateString();
+            })
+            ->addColumn('created_by', function ($page) {
+                return $page->created_by;
             })
             ->addColumn('actions', function ($page) {
                 return $page->action_buttons;

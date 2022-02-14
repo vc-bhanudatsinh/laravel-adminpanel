@@ -114,6 +114,20 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+    "pages" => [
+        "create" => "Create Page",
+        "edit" => "Edit Page",
+        "management" => "Page Management",
+        "title" => "Pages",
+        "table" => [
+        "title" => "Title",
+        "status" => "Status",
+        "createdat" => "Created At",
+        "updatedat" => "Updated At",
+        "createdby" => "Created By",
+        "all" => "All",
+        ],
+        ],
 	"modules" => [
 	"management" => "Module Management",
 	],
@@ -122,5 +136,7 @@ return [
 	"actions" => "Action",
 	"all" => "All",
 	"custom" => "Custom",
+    "active"=>"Active",
+    "inactive"=>"Inactive",
 	],
 ];
