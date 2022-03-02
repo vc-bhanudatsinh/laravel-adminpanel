@@ -17,12 +17,12 @@ trait UserAttribute
      */
     public function getActionButtonsAttribute()
     {
-        
+
            return '<div class="btn-group action-btn">
                 ' . $this->getShowButtonAttribute("show-user", "admin.users.show") . '
                 '.$this->getEditButtonAttribute("edit-user", "admin.users.edit").'
                 '.$this->getDeleteButtonAttribute("delete-user", "admin.users.destroy").'
                 </div>';
-      
+
     }
 }
