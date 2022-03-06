@@ -18,7 +18,8 @@ class CreateApisTable extends Migration
             $table->increments('id');
             $table->string('view_permission_id', 191)->nullable();
             $table->string('name', 191)->nullable();
-            $table->string('url', 191);
+            $table->text('url')->nullable();
+            $table->text('controller_path')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned()->nullable();
             $table->timestamps();
