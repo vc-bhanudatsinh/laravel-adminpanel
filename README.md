@@ -23,6 +23,8 @@ For Laravel 8 Boilerplate Features : [Features](https://github.com/rappasoft/lar
 * Mailables
 * Livewire supported
 * Object based javascript Implementation
+*  auto database backup
+* Two Factor Authentication
 
 Give your project a Head Start by using [laravel-adminpanel](https://github.com/lbmadesia/laravel-adminpanel).
 
