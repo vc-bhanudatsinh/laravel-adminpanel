@@ -19,3 +19,19 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
+
+/*
+* Start Routes From Api Generator
+*/
+ Route::group(['namespace' => 'Api\V1', 'prefix' => 'v1', 'as' => 'v1.'], function () { 
+ require 'Api/api.php'; 
+ }); 
+/*
+*route with auth
+*/
+ Route::group(['namespace' => 'Api\V1', 'prefix' => 'v1', 'as' => 'v1.', 'middleware' => 'auth:sanctum'], function () { 
+ require 'Api/apiAuth.php'; 
+ }); 
+/*
+* End Routes From Api Generator
+*/
