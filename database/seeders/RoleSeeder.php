@@ -192,5 +192,27 @@ class RoleSeeder extends Seeder
             'display_name' => 'Delete page Permission'
         ]);
 
+
+        Permission::create([
+            'name' => 'manage-api',
+            'display_name' => 'Manage api Permission'
+        ])->create([
+            'name' => 'create-api',
+            'display_name' => 'Create api Permission'
+        ])->create([
+            'name' => 'store-api',
+            'display_name' => 'Store api Permission'
+        ])->create([
+            'name' => 'edit-api',
+            'display_name' => 'Edit api Permission'
+        ])->create([
+            'name' => 'update-api',
+            'display_name' => 'Update api Permission'
+        ])->create([
+            'name' => 'delete-api',
+            'display_name' => 'Delete api Permission'
+        ]);
+
+
     }
 }

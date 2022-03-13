@@ -52,6 +52,20 @@ return [
 	"management" => "Page Management",
 	"main" => "Pages",
 	],
+	"diwalis" => [
+	"all" => "All Diwalis",
+	"create" => "Create Diwali",
+	"edit" => "Edit Diwali",
+	"management" => "Diwali Management",
+	"main" => "Diwalis",
+	],
+	"ajays" => [
+	"all" => "All Ajays",
+	"create" => "Create Ajay",
+	"edit" => "Edit Ajay",
+	"management" => "Ajay Management",
+	"main" => "Ajays",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

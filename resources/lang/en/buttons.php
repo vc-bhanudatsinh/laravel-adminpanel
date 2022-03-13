@@ -3,7 +3,8 @@ return [
     "general"=>[
         "crud"=>[
             "create"=>"Create",
-            "update"=>"Update"
+            "update"=>"Update",
+            "delete"=>"Delete"
         ],
         "cancel"=>"Cancel",
         "save"=>"Save",

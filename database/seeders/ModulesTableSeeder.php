@@ -65,8 +65,16 @@ class ModulesTableSeeder extends Seeder
                 'created_by'            => 1,
                 'created_at'            => Carbon::now(),
             ],
+            [
+                'name'                  => trans('labels.backend.apis.management'),
+                'url'                   => 'admin.apis.index',
+                'view_permission_id'    => 'manage-api',
+                'created_by'            => 1,
+                'created_at'            => Carbon::now(),
+            ],
         ];
 
         DB::table('modules')->insert($modules);
+
     }
 }

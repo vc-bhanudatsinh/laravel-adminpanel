@@ -22,7 +22,7 @@ class RouteNeedsPermission
         $this->path = $request->path();
         if ($this->role[0]->name == 'User')
             return redirect()->route('frontend.home');
-  
+
         if ($this->role[0]->name != 'Administrator') {
             if (strpos($this->path, 'admin') === 0) {
                 // write code here to permission

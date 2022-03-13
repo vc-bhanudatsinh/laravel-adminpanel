@@ -17,9 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboardd', function () {
-    return view('dashboard');
-})->name('dashboard');
+
 
 Route::get('lang/{lang}', 'LanguageController@swap');
 

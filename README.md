@@ -51,9 +51,13 @@ If you have linux system, you can execute the command below only in your project
     1) sudo chmod -R 777 install.sh
     2) ./install.sh
 
-If you have windows system, you can run Artisan Command for database setup, connection and configuration.
+Install the vendor 
 
-    php artisan install:app
+    composer update
+
+Create .env file 
+
+     cp .env.example .env
 
 Generate a new application key
 
@@ -67,6 +71,14 @@ Run the database migrations (**Set the database connection in .env before migrat
 Run the database seeders
 
     php artisan db:seed
+
+run this command for publish packages view
+
+    php artisan sweetalert:publish
+
+    php artisan vendor:publish --tag=generator
+
+    php artisan vendor:publish --tag=api-generator
 
 Install the javascript dependencies using npm
 

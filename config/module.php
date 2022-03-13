@@ -24,4 +24,8 @@ return [
 	"pages" => [
 	"table" => "pages",
 	],
+    "apis" => [
+        "table" => "apis",
+        ],
+
 ];
