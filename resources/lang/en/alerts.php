@@ -31,15 +31,5 @@ return [
 	"deleted" => "The Page was successfully deleted.",
 	"updated" => "The Page was successfully updated.",
 	],
-	"diwalis" => [
-	"created" => "The Diwali was successfully created.",
-	"deleted" => "The Diwali was successfully deleted.",
-	"updated" => "The Diwali was successfully updated.",
-	],
-	"ajays" => [
-	"created" => "The Ajay was successfully created.",
-	"deleted" => "The Ajay was successfully deleted.",
-	"updated" => "The Ajay was successfully updated.",
-	],
 	],
 ];

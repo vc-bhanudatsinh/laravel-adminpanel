@@ -43,19 +43,5 @@ return [
 	"not_found" => "That Page does not exist.",
 	"update_error" => "There was a problem updating this Page. Please try again.",
 	],
-	"diwalis" => [
-	"already_exists" => "That Diwali already exists. Please choose a different name.",
-	"create_error" => "There was a problem creating this Diwali. Please try again.",
-	"delete_error" => "There was a problem deleting this Diwali. Please try again.",
-	"not_found" => "That Diwali does not exist.",
-	"update_error" => "There was a problem updating this Diwali. Please try again.",
-	],
-	"ajays" => [
-	"already_exists" => "That Ajay already exists. Please choose a different name.",
-	"create_error" => "There was a problem creating this Ajay. Please try again.",
-	"delete_error" => "There was a problem deleting this Ajay. Please try again.",
-	"not_found" => "That Ajay does not exist.",
-	"update_error" => "There was a problem updating this Ajay. Please try again.",
-	],
 	],
 ];

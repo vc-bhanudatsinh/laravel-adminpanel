@@ -144,16 +144,6 @@ return [
 	"createdat" => "Created At",
 	],
 	],
-	"ajays" => [
-	"create" => "Create Ajay",
-	"edit" => "Edit Ajay",
-	"management" => "Ajay Management",
-	"title" => "Ajays",
-	"table" => [
-	"id" => "Id",
-	"createdat" => "Created At",
-	],
-	],
 	],
 	"general" => [
 	"actions" => "Action",
