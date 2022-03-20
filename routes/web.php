@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-
+})->name('dashboard');
 
 Route::get('lang/{lang}', 'LanguageController@swap');
 
