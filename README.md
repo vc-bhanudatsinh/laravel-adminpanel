@@ -1,5 +1,4 @@
 # laravel-adminpanel
-[![GitHub stars](https://img.shields.io/github/stars/lbmadesia/laravel-adminpanel.svg?style=plastic)](https://github.com/lbmadesia/laravel-adminpanel/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/lbmadesia/laravel-adminpanel.svg?style=plastic)](https://github.com/lbmadesia/laravel-adminpanel/network)
 [![GitHub issues](https://img.shields.io/github/issues/lbmadesia/laravel-adminpanel.svg?style=plastic)](https://github.com/lbmadesia/laravel-adminpanel/issues)
 ![StyleCI](https://img.shields.io/badge/styleCI-passed-brightgreen.svg?style=plastic)
